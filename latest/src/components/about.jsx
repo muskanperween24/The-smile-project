@@ -1,20 +1,18 @@
 import React from "react";
-import "./The-smile-project/latest/src/components/about.css"; // apni CSS file yahan link karni hai
+import "./about.css";
 
 const About = () => {
   return (
     <div>
-      {/* 🔹 Hero Banner (Collage Background) */}
-      <section className="hero-section">
-        <div className="image-grid">
-          <img src="images.jpeg" alt="" />
-          <img src="student 1.jpg" alt="" />
-          <img src="student.jpg" alt="" />
-          <img src="images (3).jpeg" alt="" />
-          <img src="images (2).jpeg" alt="" />
-          <img src="images (1).jpeg" alt="" />
-        </div>
-
+      {/* 🔹 Hero Banner with Gradient Background */}
+      <section className="hero-section" style={{
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        minHeight: '400px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white'
+      }}>
         <div className="overlay"></div>
 
         <div className="hero-text">
@@ -33,7 +31,7 @@ const About = () => {
           {/* Left Image + Right Text */}
           <div className="about-row">
             <div className="about-img">
-              <img src="student 2.jpeg" alt="Our Work" />
+              <img src="/student 2.jpeg" alt="Our Work" />
             </div>
             <div className="about-text">
               <h2>About The Project Smile</h2>
@@ -54,7 +52,7 @@ const About = () => {
           {/* Why We Are Doing This */}
           <div className="about-row reverse">
             <div className="about-img">
-              <img src="student.jpeg" alt="Our Team" />
+              <img src="/images (2).jpeg" alt="Our Team" />
             </div>
             <div className="about-text">
               <h2>Why We Are Doing This</h2>
