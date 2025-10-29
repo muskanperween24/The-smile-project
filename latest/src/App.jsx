@@ -5,6 +5,13 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import './App.css'
 
+// TODO: Friends will add these components
+// import About from './components/About'
+// import Programs from './components/Programs'
+// import Team from './components/Team'
+// import Donate from './components/Donate'
+// import Contact from './components/Contact'
+
 function App() {
   return (
     <Router>
@@ -12,6 +19,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* TODO: Friends will uncomment and add these routes when components are ready */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/programs" element={<Programs />} /> */}
+          {/* <Route path="/team" element={<Team />} /> */}
+          {/* <Route path="/donate" element={<Donate />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
         <Footer />
       </div>

@@ -26,10 +26,12 @@ const Navbar = () => {
 
           <div className="nav-menu desktop-menu">
             <Link to="/">Home</Link>
+            {/* For now using anchor links, friends can change to <Link to="/about"> when About component is ready */}
             <a href="#about">About</a>
-            <a href="#programs">Our Program</a>
+            <a href="#programs">Programs</a>
             <a href="#team">Team</a>
-            <a href="#donate" className="donate-btn">Donate Now</a>
+            <a href="#get-involved">Donate</a>
+            <a href="#contact" className="contact-btn">Contact</a>
           </div>
 
           <div className="mobile-menu-btn">
@@ -42,10 +44,12 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="mobile-menu">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            {/* Friends can change these to <Link to="/about"> etc. when components are ready */}
             <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
-            <a href="#programs" onClick={() => setIsMenuOpen(false)}>Our Program</a>
+            <a href="#programs" onClick={() => setIsMenuOpen(false)}>Programs</a>
             <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
-            <a href="#donate" className="donate-btn" onClick={() => setIsMenuOpen(false)}>Donate Now</a>
+            <a href="#get-involved" onClick={() => setIsMenuOpen(false)}>Donate</a>
+            <a href="#contact" className="contact-btn" onClick={() => setIsMenuOpen(false)}>Contact</a>
           </div>
         )}
       </div>

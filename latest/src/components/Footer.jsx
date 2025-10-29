@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       {/* Main Footer Content */}
       <div className="footer-content">
         <div className="footer-grid">
@@ -18,10 +18,11 @@ const Footer = () => {
               Join us in making the world a brighter place.
             </p>
             <div className="social-links">
-              <a href="#">📘</a>
-              <a href="#">🐦</a>
-              <a href="#">📷</a>
-              <a href="#">📌</a>
+              <a href="#" title="Facebook">📘</a>
+              <a href="#" title="Twitter">🐦</a>
+              <a href="#" title="Instagram">📷</a>
+              <a href="#" title="YouTube">�</a>
+              <a href="#" title="LinkedIn">💼</a>
             </div>
           </div>
 
@@ -51,26 +52,12 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="footer-section">
+                    <div className="footer-contact">
             <h4>Contact Info</h4>
-            <div className="contact-info">
-              <div className="contact-item">
-                <span className="contact-icon">📍</span>
-                <p>
-                  123 Kindness Street<br/>
-                  Hope City, HC 12345<br/>
-                  India
-                </p>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">📞</span>
-                <p>+91 98765 43210</p>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">✉️</span>
-                <p>info@smileproject.org</p>
-              </div>
-            </div>
+            <br></br>
+            <p>📍 Village: Dalua Hat,   P.O.: Taiyabpur,  P.S. : Pothia, District: Kishanganj, Bihar – 855117</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ info@smilenko.org</p>
           </div>
         </div>
       </div>

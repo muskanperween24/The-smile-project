@@ -45,6 +45,13 @@ footer {
   margin-bottom: 1rem;
 }
 
+.footer-contact h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fde047;
+  margin-bottom: 1rem;
+}
+
 .footer-section p {
   color: #d1d5db;
   line-height: 1.6;
