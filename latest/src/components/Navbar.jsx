@@ -26,8 +26,7 @@ const Navbar = () => {
 
           <div className="nav-menu desktop-menu">
             <Link to="/">Home</Link>
-            {/* For now using anchor links, friends can change to <Link to="/about"> when About component is ready */}
-            <a href="#about">About</a>
+            <Link to="/about">About</Link>
             <a href="#programs">Programs</a>
             <a href="#team">Team</a>
             <a href="#get-involved">Donate</a>
@@ -44,8 +43,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="mobile-menu">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            {/* Friends can change these to <Link to="/about"> etc. when components are ready */}
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
             <a href="#programs" onClick={() => setIsMenuOpen(false)}>Programs</a>
             <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
             <a href="#get-involved" onClick={() => setIsMenuOpen(false)}>Donate</a>
