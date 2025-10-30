@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -30,12 +31,12 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#programs">Our Programs</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/programs">Our Programs</Link></li>
+              <li><Link to="/team">Our Team</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
               <li><a href="#donate">Donate</a></li>
-              <li><a href="#volunteer">Volunteer</a></li>
-              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
 
@@ -43,11 +44,11 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Our Programs</h4>
             <ul>
-              <li><a href="#">Community Outreach</a></li>
-              <li><a href="#">Education Support</a></li>
-              <li><a href="#">Food Distribution</a></li>
-              <li><a href="#">Health Camps</a></li>
-              <li><a href="#">Skill Development</a></li>
+              <li><Link to="/programs">View All Programs</Link></li>
+              <li><Link to="/about">Our Mission</Link></li>
+              <li><Link to="/team">Meet Our Team</Link></li>
+              <li><Link to="/contact">Get In Touch</Link></li>
+              <li><Link to="/">Learn More</Link></li>
             </ul>
           </div>
 

@@ -157,10 +157,10 @@ const Home = () => {
             </div>
             <div className="testimonial-card">
               <div className="testimonial-image">
-                <img src="/images/success-story-2.jpg" alt="Ravi's Success Story" />
+                <img src="/images/WhatsApp Image 2025-09-26 at 11.01.19 AM.jpeg" alt="Success Story" />
               </div>
               <div className="testimonial-content">
-                <h3>Ravi's Transformation</h3>
+                <h3>Skills Development Success</h3>
                 <p>"The skill development program changed my life. I learned tailoring and now I have my own shop. My family is financially stable and my children go to school."</p>
                 <div className="testimonial-author">
                   <strong>- Ravi Kumar, Entrepreneur</strong>
@@ -220,33 +220,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Get Involved Section */}
-      <div id="get-involved" className="get-involved-section">
-        <div className="container">
-          <h2>Get Involved</h2>
-          <p>Join us in making a difference. There are many ways you can contribute to our mission.</p>
-          <div className="involvement-grid">
-            <div className="involvement-card">
-              <div className="involvement-icon">🙋‍♀️</div>
-              <h3>Volunteer</h3>
-              <p>Join our team of dedicated volunteers and directly impact lives in your community.</p>
-              <button className="btn-primary">Become a Volunteer</button>
-            </div>
-            <div className="involvement-card">
-              <div className="involvement-icon">❤️</div>
-              <h3>Donate</h3>
-              <p>Your generous donations help us continue our work and reach more people in need.</p>
-              <button className="btn-secondary">Make a Donation</button>
-            </div>
-            <div className="involvement-card">
-              <div className="involvement-icon">🤝</div>
-              <h3>Partner</h3>
-              <p>Partner with us to create sustainable change and expand our reach in communities.</p>
-              <button className="btn-primary">Partner With Us</button>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
       {/* Latest News */}
       <div className="news-section">
