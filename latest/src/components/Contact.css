@@ -1,0 +1,419 @@
+.contact-page {
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-form {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.send-message-btn {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.send-message-btn:hover {
+  background: linear-gradient(135deg, #e55a2b, #e0841a);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+}
+
+.contact-info-section {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  height: fit-content;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  background: #ffffff;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: #2c3e50;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-details h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.contact-details p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #4285f4, #1976d2);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 60px 15px 40px;
+  }
+
+  .contact-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-header p {
+    font-size: 1.1rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form,
+  .contact-info-section {
+    padding: 25px;
+  }
+
+  .contact-info-item {
+    padding: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form,
+  .contact-info-section {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+  }
+}
+
+/* Map Section Styles */
+.map-section {
+  margin-top: 80px;
+  padding: 60px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.map-header h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.map-header p {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.map-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  );
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.map-container:hover .map-overlay {
+  opacity: 1;
+}
+
+.map-info {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateX(-100px);
+  transition: all 0.4s ease 0.1s;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.map-container:hover .map-info {
+  transform: translateX(0);
+}
+
+.map-info h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.map-info p {
+  color: #666;
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+}
+
+.directions-btn {
+  background: linear-gradient(135deg, #4285f4, #1976d2);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.directions-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.2);
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 2;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+  filter: grayscale(0.3);
+}
+
+.map-container:hover .map-frame iframe {
+  filter: grayscale(0);
+}
+
+
+
+/* Map Section Responsive Design */
+@media (max-width: 768px) {
+  .map-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+  }
+
+  .map-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .map-header p {
+    font-size: 1.1rem;
+  }
+
+  .map-container {
+    border-radius: 15px;
+    transform: none;
+  }
+
+  .map-container:hover {
+    transform: scale(1.02);
+  }
+
+  .map-overlay {
+    position: relative;
+    opacity: 1;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    padding: 20px;
+  }
+
+  .map-info {
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-section {
+    padding: 30px 15px;
+  }
+
+  .map-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .map-overlay {
+    padding: 15px;
+  }
+
+  .map-info {
+    padding: 20px;
+  }
+
+  .map-frame {
+    height: 250px;
+  }
+}

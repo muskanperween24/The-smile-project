@@ -2,54 +2,60 @@ import React from 'react';
 import './Team.css';
 
 const Team = () => {
-  const teamMembers = [
+  // Trustees
+  const trustees = [
     {
       id: 1,
-      name: "Dr. Priya Sharma",
-      role: "Founder & CEO",
+      name: "MD SAKIM",
+      role: "Trustee",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description: "With over 15 years of experience in social work, Dr. Priya founded The Project Smile to bring sustainable change to communities.",
-      expertise: ["Community Development", "Healthcare Policy", "Leadership"]
+      description: "Dedicated trustee committed to the organization's mission and vision, bringing valuable guidance and oversight to our initiatives."
     },
     {
       id: 2,
-      name: "Rajesh Kumar",
-      role: "Program Director",
+      name: "SAJID HUSSAIN",
+      role: "Trustee",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description: "Rajesh oversees all our programs and ensures effective implementation across different communities and regions.",
-      expertise: ["Project Management", "Field Operations", "Strategy Planning"]
+      description: "Experienced trustee who provides strategic direction and ensures ethical governance in all organizational activities."
     },
     {
       id: 3,
-      name: "Dr. Anjali Patel",
-      role: "Medical Head",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description: "Leading our healthcare initiatives, Dr. Anjali brings medical expertise to our community health programs.",
-      expertise: ["Public Health", "Medical Camps", "Health Education"]
+      name: "ROHAN KUMAR PANDIT",
+      role: "Trustee",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description: "Brings a deep-rooted sense of responsibility and burgeoning confidence to his work as trustee, ensuring organizational accountability."
     },
     {
       id: 4,
-      name: "Meera Singh",
-      role: "Education Coordinator",
+      name: "SANGITA KUMARI",
+      role: "Trustee",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description: "Meera leads our educational programs and works directly with schools and communities to improve literacy rates.",
-      expertise: ["Curriculum Development", "Teacher Training", "Child Psychology"]
-    },
+      description: "Passionate trustee focused on community development and ensuring the organization's programs reach those who need them most."
+    }
+  ];
+
+  // Founders and Leadership
+  const founders = [
     {
-      id: 5,
-      name: "Amit Verma",
-      role: "Technology Lead",
+      id: 1,
+      name: "MD MEHRUDDIN",
+      role: "Founder/Chairman",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description: "Amit manages our digital initiatives and helps integrate technology solutions into our programs.",
-      expertise: ["Digital Solutions", "Data Management", "Tech Training"]
+      description: "Madad, mehnat aur mannat (help and hard work, good wishes) are never wasted. If people achieve their dreams through my work, my dream would be achieved."
     },
     {
-      id: 6,
-      name: "Sunita Devi",
-      role: "Community Relations",
-      image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-      description: "Sunita builds strong relationships with local communities and ensures our programs meet their specific needs.",
-      expertise: ["Community Engagement", "Cultural Sensitivity", "Local Partnerships"]
+      id: 2,
+      name: "SHAJAHAN ALI",
+      role: "Co-Founder/Secretary",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description: "Co-founder dedicated to building sustainable programs and ensuring effective coordination between all organizational activities."
+    },
+    {
+      id: 3,
+      name: "MD SAIDUL HAQUE",
+      role: "Treasurer",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description: "Experienced treasurer ensuring financial transparency and efficient resource management for maximum impact in community programs."
     }
   ];
 
@@ -57,93 +63,59 @@ const Team = () => {
     <div className="team-page">
       {/* Header Section */}
       <div className="team-header">
-        <div className="container">
-          <h1>Meet Our Team</h1>
-          <p>
-            Dedicated individuals working together to create positive change in communities across the nation
-          </p>
+        <div className="team-header-content">
+          <div className="team-title-section">
+            <h1>Meet <span className="highlight">Our Team</span></h1>
+          </div>
+          <div className="team-description-section">
+            <p>
+              We're a cross-cultural team, passionate about creating opportunities for rural communities, prioritizing lifelong learning, and ecological balance toward positive change.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Team Members Section */}
-      <div className="team-members">
-        <div className="container">
-          <div className="team-grid">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="team-card">
-                <div className="team-image">
-                  <img src={member.image} alt={member.name} />
-                  <div className="team-overlay">
-                    <div className="social-links">
-                      <a href="#" className="social-link">📧</a>
-                      <a href="#" className="social-link">📞</a>
-                      <a href="#" className="social-link">🔗</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="team-info">
-                  <h3>{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-description">{member.description}</p>
-                  
-                  <div className="team-expertise">
-                    <h4>Expertise:</h4>
-                    <div className="expertise-tags">
-                      {member.expertise.map((skill, index) => (
-                        <span key={index} className="expertise-tag">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+      {/* Trustees Section */}
+      <div className="team-section">
+        <div className="section-header">
+          <h2>Trustees</h2>
+        </div>
+        <div className="team-members-grid">
+          {trustees.map((member) => (
+            <div key={member.id} className="team-member-card">
+              <div className="member-image">
+                <img src={member.image} alt={member.name} />
               </div>
-            ))}
-          </div>
+              <div className="member-info">
+                <h3 className="member-name">{member.name}</h3>
+                <p className="member-role">{member.role}</p>
+                <p className="member-description">{member.description}</p>
+                <button className="read-more-btn">Read more</button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Values Section */}
-      <div className="team-values">
-        <div className="container">
-          <h2>Our Values</h2>
-          <div className="values-grid">
-            <div className="value-card">
-              <div className="value-icon">💝</div>
-              <h3>Compassion</h3>
-              <p>We approach every situation with empathy and understanding, putting people first in everything we do.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🤝</div>
-              <h3>Collaboration</h3>
-              <p>We work together with communities, partners, and stakeholders to create sustainable solutions.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🎯</div>
-              <h3>Impact</h3>
-              <p>We measure our success by the positive change we create in the lives of people and communities.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">🌟</div>
-              <h3>Excellence</h3>
-              <p>We strive for the highest standards in all our programs and maintain transparency in our operations.</p>
-            </div>
-          </div>
+      {/* Founders & Leadership Section */}
+      <div className="team-section">
+        <div className="section-header">
+          <h2>Founders & Leadership</h2>
         </div>
-      </div>
-
-      {/* Join Team Section */}
-      <div className="join-team">
-        <div className="container">
-          <h2>Join Our Team</h2>
-          <p>
-            Are you passionate about making a difference? We're always looking for dedicated individuals 
-            who share our vision of creating positive change in communities.
-          </p>
-          <div className="join-buttons">
-            <button className="btn-primary">View Open Positions</button>
-            <button className="btn-secondary">Volunteer With Us</button>
-          </div>
+        <div className="team-members-grid">
+          {founders.map((member) => (
+            <div key={member.id} className="team-member-card">
+              <div className="member-image">
+                <img src={member.image} alt={member.name} />
+              </div>
+              <div className="member-info">
+                <h3 className="member-name">{member.name}</h3>
+                <p className="member-role">{member.role}</p>
+                <p className="member-description">{member.description}</p>
+                <button className="read-more-btn">Read more</button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="nav-logo">
             <Link to="/" className="logo-link">
               <img 
-                src="/logo.jpg" 
+                src="/images/logo.jpg" 
                 alt="The Project Smile Logo" 
                 className="logo-img"
                 onError={(e) => {
@@ -25,11 +25,13 @@ const Navbar = () => {
           </div>
 
           <div className="nav-menu desktop-menu">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/programs">Our Program</Link>
-            <a href="#team">Team</a>
-            <a href="#donate" className="donate-btn">Donate Now</a>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/programs" className="nav-link">Programs</Link>
+            <Link to="/team" className="nav-link">Team</Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
+            <button className="join-us-btn">Join Us</button>
+            <button className="donate-btn">Donate Now</button>
           </div>
 
           <div className="mobile-menu-btn">
@@ -43,9 +45,11 @@ const Navbar = () => {
           <div className="mobile-menu">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Our Program</Link>
-            <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
-            <a href="#donate" className="donate-btn" onClick={() => setIsMenuOpen(false)}>Donate Now</a>
+            <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
+            <Link to="/team" onClick={() => setIsMenuOpen(false)}>Team</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            <button className="join-us-btn mobile" onClick={() => setIsMenuOpen(false)}>Join Us</button>
+            <button className="donate-btn mobile" onClick={() => setIsMenuOpen(false)}>Donate Now</button>
           </div>
         )}
       </div>
