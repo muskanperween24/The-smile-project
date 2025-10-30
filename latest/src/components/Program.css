@@ -1,221 +1,73 @@
-/* Program Component CSS */
+/* Programs Page Styles */
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.programs-page {
+  padding: 2rem 0;
+  min-height: 80vh;
+  background-color: #f8fafc;
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.programs-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.programs-page h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+.programs-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Base styling */
-.program-container {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-}
-
-/* Navigation */
-.program-nav {
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.program-nav .nav-logo {
-  animation: pulse 3s infinite;
-}
-
-.program-nav a:hover {
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-  color: #059669;
-}
-
-/* Header section */
-.program-header {
-  background: linear-gradient(135deg, #059669 0%, #0d9488 50%, #0891b2 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.program-title {
-  animation: slideInLeft 1s ease-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.program-subtitle {
-  animation: slideInLeft 1s ease-out 0.2s both;
-}
-
-.program-buttons {
-  animation: slideInLeft 1s ease-out 0.4s both;
-}
-
-.program-form {
-  animation: slideInRight 1s ease-out 0.3s both;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.program-form input:focus,
-.program-form textarea:focus {
-  transform: scale(1.02);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-}
-
-.program-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Programs grid */
-.programs-section {
-  animation: fadeInUp 1s ease-out;
-}
-
-.program-card {
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.program-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.program-icon {
+.program-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-.program-card:hover .program-icon {
-  transform: rotate(10deg) scale(1.1);
-}
-
-.program-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Success story */
-.success-story {
-  animation: fadeInUp 1s ease-out;
-}
-
-.success-card:hover {
+.program-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.success-image img {
-  transition: all 0.4s ease;
+.program-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #3b82f6;
+  padding-bottom: 0.5rem;
 }
 
-.success-image:hover img {
-  transform: scale(1.05);
+.program-section p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.7;
 }
 
-/* Contact section */
-.contact-section {
-  animation: fadeInUp 1s ease-out;
-}
-
-.contact-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-.contact-icon {
-  transition: all 0.4s ease;
-}
-
-.contact-card:hover .contact-icon {
-  transform: rotateY(180deg) scale(1.1);
-}
-
-.contact-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .program-title {
-    font-size: 2.5rem !important;
-    line-height: 1.2;
+  .programs-page h1 {
+    font-size: 2rem;
   }
   
-  .program-card,
-  .contact-card {
-    margin-bottom: 1.5rem;
+  .programs-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
-  .program-form {
-    margin-top: 2rem;
+  .program-section {
+    padding: 1.5rem;
   }
-}
-
-/* Accessibility */
-.program-button:focus,
-.contact-button:focus,
-.program-form button:focus {
-  outline: 3px solid rgba(59, 130, 246, 0.5);
-  outline-offset: 2px;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #059669, #0d9488);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #047857, #0f766e);
 }
