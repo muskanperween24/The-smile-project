@@ -86,6 +86,27 @@ const Program = () => {
                 title: "Success Tracking",
                 desc: "We track students’ progress and share their success stories to inspire others.",
               },
+              {
+               icon: "🗳️",
+               title: "Political Awareness",
+               desc: "Logon ko sahi aur imandaar politics ke baare me jagruk banana.",
+               },
+              {
+                icon: "🎓",
+                title: "Educational Institutions",
+                 desc: "School, College, aur University jaise educational centers chalana.",
+              },
+             {
+                 icon: "🧠",
+                 title: "Social Awareness Programs",
+                 desc: "Samajik, shiksha aur dharmik awareness badhana.",
+               },
+               {
+                 icon: "🚑",
+                 title: "Disaster Relief & Management",
+                 desc: "Natural disaster ke time relief aur recovery ka kaam karna.",
+               },
+
             ].map((p, i) => (
               <article key={i} className="program-card">
                 <div className="icon">{p.icon}</div>
