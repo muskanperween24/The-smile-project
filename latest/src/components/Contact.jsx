@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { saveContactForm } from '../firebaseConfig';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +10,39 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // EmailJS Configuration - Replace with your actual EmailJS credentials
+  const EMAILJS_SERVICE_ID = 'service_8x7mltp'; // Demo service ID
+  const EMAILJS_TEMPLATE_ID = 'template_nv7k7mj'; // Demo template ID  
+  const EMAILJS_PUBLIC_KEY = 'SybVoyAGepQO7wiR9'; // Demo public key
+
+  const sendEmailNotification = async (formData) => {
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        message: formData.message,
+        to_name: 'Muskan Perween',
+        to_email: 'muskanperween24@navgurukul.org',
+        reply_to: formData.email
+      };
+
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', response);
+      return { success: true };
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      return { success: false, error: error.message };
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -17,26 +52,49 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add actual form submission logic here
-    alert('Message sent successfully!');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-  };
-
-  const handleWhatsAppMessage = () => {
-    const message = encodeURIComponent('Hi, I would like to know more about The Project Smile.');
-    const phoneNumber = '911234567890'; // Replace with actual WhatsApp number
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    setIsSubmitting(true);
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill in all required fields.');
+      setIsSubmitting(false);
+      return;
+    }
+    
+    try {
+      console.log('Submitting form data:', formData);
+      
+      // Save to Firebase
+      const firebaseResult = await saveContactForm(formData);
+      
+      if (firebaseResult.success) {
+        // Send email notification to muskanperween24@navgurukul.org
+        const emailResult = await sendEmailNotification(formData);
+        
+        if (emailResult.success) {
+          alert('Message sent successfully! We will get back to you soon.\nEmail notification sent to our team.');
+        } else {
+          alert('Message saved successfully! We will get back to you soon.\n(Email notification may have failed, but we received your message.)');
+        }
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      } else {
+        alert('Failed to send message: ' + firebaseResult.error);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error sending message. Please try again.');
+    }
+    
+    setIsSubmitting(false);
   };
 
   return (
@@ -101,8 +159,9 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="send-message-btn">
-                <span>✈</span> Send Message
+              <button type="submit" className="send-message-btn" disabled={isSubmitting}>
+                <span>{isSubmitting ? '⏳' : '✈'}</span> 
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
@@ -137,10 +196,6 @@ const Contact = () => {
                 <p>New Delhi, India</p>
               </div>
             </div>
-
-            <button className="whatsapp-btn" onClick={handleWhatsAppMessage}>
-              <span>💬</span> Message on WhatsApp
-            </button>
           </div>
         </div>
 
