@@ -9,12 +9,6 @@ import Team from './components/Team'
 import Footer from './components/Footer'
 import './App.css'
 
-// TODO: Friends will add these components
-// import Programs from './components/Programs'
-// import Team from './components/Team'
-// import Donate from './components/Donate'
-// import Contact from './components/Contact'
-
 function App() {
   return (
     <Router>
