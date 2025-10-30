@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="nav-logo">
             <Link to="/" className="logo-link">
               <img 
-                src="/logo.jpg" 
+                src="/images/logo.jpg" 
                 alt="The Project Smile Logo" 
                 className="logo-img"
                 onError={(e) => {
