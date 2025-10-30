@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/about'
-import Programs from './components/Program'
+import Program from './components/Program'
 import Contact from './components/Contact'
 import Team from './components/Team'
 import Footer from './components/Footer'
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
+          <Route path="/programs" element={<Program />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
           {/* TODO: Add donate route when component is ready */}
