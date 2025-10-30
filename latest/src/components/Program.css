@@ -1,221 +1,230 @@
-/* Program Component CSS */
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* 🌈 Header */
+.header {
+ 
+  background-image: url('student4.jpg');
+  color: white;
+  text-align: center;
+  padding: 64px 16px;
+  background-size: cover;
+
+  
+  /* backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '400px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center', */
+}
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.btn-group {
+  margin-top: 16px;
+}
+.btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.btn.join {
+  background-color: #facc15;
+  color: black;
+}
+.btn.join:hover {
+  background-color: #fde047;
+}
+.btn.volunteer {
+  background-color: white;
+  color: #0f766e;
+}
+.btn.volunteer:hover {
+  background-color: #f3f4f6;
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* 📋 Join Form */
+.join-form {
+  background: white;
+  color: black;
+  width: 320px;
+  margin: 24px auto 0;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.join-form h3 {
+  text-align: center;
+  color: #0f766e;
+  margin-bottom: 16px;
+}
+.join-form input,
+.join-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.join-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #0f766e;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.join-form button:hover {
+  background: #14b8a6;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+/* 📚 Programs Section */
+.main-section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 16px;
 }
-
-/* Base styling */
-.program-container {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+.section-title {
+  text-align: center;
 }
-
-/* Navigation */
-.program-nav {
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.section-title h2 {
+  color: #0f766e;
+  font-size: 2rem;
+  font-weight: 700;
 }
-
-.program-nav .nav-logo {
-  animation: pulse 3s infinite;
+.section-title span {
+  display: inline-block;
+  background: #ccfbf1;
+  color: #6b7280;
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin-top: 5px;
+  font-size: 0.9rem;
 }
-
-.program-nav a:hover {
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-  color: #059669;
+.program-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 40px;
 }
-
-/* Header section */
-.program-header {
-  background: linear-gradient(135deg, #059669 0%, #0d9488 50%, #0891b2 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.program-title {
-  animation: slideInLeft 1s ease-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.program-subtitle {
-  animation: slideInLeft 1s ease-out 0.2s both;
-}
-
-.program-buttons {
-  animation: slideInLeft 1s ease-out 0.4s both;
-}
-
-.program-form {
-  animation: slideInRight 1s ease-out 0.3s both;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.program-form input:focus,
-.program-form textarea:focus {
-  transform: scale(1.02);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-}
-
-.program-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Programs grid */
-.programs-section {
-  animation: fadeInUp 1s ease-out;
-}
-
 .program-card {
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
-
 .program-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.program-card .icon {
+  font-size: 1.5rem;
+  color: #0f766e;
 }
 
-.program-icon {
-  transition: all 0.3s ease;
+/* 🌟 Success Story */
+.success-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+.success-section h2 {
+  color: #0f766e;
+}
+.success-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .success-content {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.success-content img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+.button-group button {
+  margin-right: 10px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.join-btn {
+  background: #0f766e;
+  color: white;
+}
+.join-btn:hover {
+  background: #14b8a6;
+}
+.story-btn {
+  background: #facc15;
+  color: black;
+}
+.story-btn:hover {
+  background: #fde047;
 }
 
-.program-card:hover .program-icon {
-  transform: rotate(10deg) scale(1.1);
-}
-
-.program-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Success story */
-.success-story {
-  animation: fadeInUp 1s ease-out;
-}
-
-.success-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.success-image img {
-  transition: all 0.4s ease;
-}
-
-.success-image:hover img {
-  transform: scale(1.05);
-}
-
-/* Contact section */
+/* 📞 Contact Section */
 .contact-section {
-  animation: fadeInUp 1s ease-out;
+  margin-top: 80px;
 }
-
-.contact-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+.contact-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-
-.contact-icon {
-  transition: all 0.4s ease;
+.contact-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-.contact-card:hover .contact-icon {
-  transform: rotateY(180deg) scale(1.1);
+.contact-card h3 {
+  color: #0f766e;
+  font-size: 1.5rem;
 }
-
-.contact-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.contact-card button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .program-title {
-    font-size: 2.5rem !important;
-    line-height: 1.2;
-  }
-  
-  .program-card,
-  .contact-card {
-    margin-bottom: 1.5rem;
-  }
-  
-  .program-form {
-    margin-top: 2rem;
-  }
+.volunteer-btn {
+  background: #0f766e;
+  color: white;
 }
-
-/* Accessibility */
-.program-button:focus,
-.contact-button:focus,
-.program-form button:focus {
-  outline: 3px solid rgba(59, 130, 246, 0.5);
-  outline-offset: 2px;
+.volunteer-btn:hover {
+  background: #14b8a6;
 }
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+.donate-btn {
+  background: #facc15;
+  color: black;
 }
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #059669, #0d9488);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #047857, #0f766e);
+.donate-btn:hover {
+  background: #fde047;
 }
