@@ -78,8 +78,8 @@ const About = () => {
           </div>
 
 {/* Our Approach */}
+
           <div className="about-row">
-            
             <div className="about-text">
               <h2>Our Approach – The Project Smile</h2>
               
