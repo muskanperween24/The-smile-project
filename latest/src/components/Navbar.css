@@ -9,9 +9,8 @@
 }
 
 .nav-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .nav-content {
@@ -19,12 +18,15 @@
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  width: 100%;
+  padding: 0;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-left: 0;
 }
 
 .logo-link {
@@ -68,6 +70,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-right: 0;
 }
 
 .desktop-menu a,

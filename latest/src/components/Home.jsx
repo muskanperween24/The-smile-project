@@ -7,22 +7,22 @@ const Home = () => {
   // Slider images data
   const sliderImages = [
     {
-      image: '/images/slide1.jpg',
+      image: '/images/pexels-bri-schneiter-28802-346529.jpg',
       title: 'Inclusive development practices',
       description: 'Empowering communities through education and sustainable development'
     },
     {
-      image: '/images/slide2.jpg', 
+      image: '/images/pexels-francesco-ungaro-3027422.jpg', 
       title: 'Education for All',
       description: 'Providing quality education to underprivileged children'
     },
     {
-      image: '/images/slide3.jpg',
+      image: '/images/pexels-julien-goettelmann-44396125-19453552.jpg',
       title: 'Healthcare & Wellness',
       description: 'Bringing essential healthcare services to rural communities'
     },
     {
-      image: '/images/slide4.jpg',
+      image: '/images/pexels-raulling-29304914.jpg',
       title: 'Women Empowerment',
       description: 'Supporting women through skill development and entrepreneurship'
     }
@@ -99,17 +99,16 @@ const Home = () => {
         </div>
       </div>
 
-      {/* About Section */}
-      <div id="about" className="about-section">
+      {/* Mission Section */}
+      <div className="mission-section">
         <div className="container">
-          <h2>About The Project Smile</h2>
-          <p className="about-text">
-            The Project Smile is a non-profit organization dedicated to creating positive change in underprivileged communities. 
-            We focus on education, healthcare, women empowerment, and environmental sustainability to build a better future for all. 
-            Through our dedicated team of volunteers and supporters, we have been spreading smiles across communities for over a decade.
-          </p>
-          <div className="about-image">
-            <img src="/images/about-us.jpg" alt="About The Project Smile" />
+          <h2>About The Project Smile Trust</h2>
+          <div className="mission-text">
+            The Project Smile Trust is a registered non-profit organization under the Indian Trust Act, 1882. 
+            It was officially registered at the Sub Registry Office, Thakurganj, Bihar on 12 July 2024.
+            <br /><br />
+            Our Trust was founded by Md. Mehruddin with a mission to create positive social change and 
+            improve the lives of underprivileged children and families.
           </div>
         </div>
       </div>
@@ -146,10 +145,10 @@ const Home = () => {
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <div className="testimonial-image">
-                <img src="/images/success-story-1.jpg" alt="Priya's Success Story" />
+                <img src="/images/IMG-20240915-WA0106.jpg" alt="Success Story" />
               </div>
               <div className="testimonial-content">
-                <h3>Priya's Journey</h3>
+                <h3>Community Impact</h3>
                 <p>"Through The Project Smile's education program, I completed my studies and now I'm a teacher in my village. I'm helping other children achieve their dreams too."</p>
                 <div className="testimonial-author">
                   <strong>- Priya Sharma, Village Teacher</strong>
@@ -179,7 +178,7 @@ const Home = () => {
           <div className="programs-grid">
             <div className="program-card">
               <div className="program-image">
-                <img src="/images/education-program.jpg" alt="Education Program" />
+                <img src="/images/pexels-francesco-ungaro-3027422.jpg" alt="Education Program" />
               </div>
               <div className="program-content">
                 <div className="program-icon">📚</div>
@@ -189,7 +188,7 @@ const Home = () => {
             </div>
             <div className="program-card">
               <div className="program-image">
-                <img src="/images/health-program.jpg" alt="Health Program" />
+                <img src="/images/pexels-julien-goettelmann-44396125-19453552.jpg" alt="Health Program" />
               </div>
               <div className="program-content">
                 <div className="program-icon">🏥</div>
