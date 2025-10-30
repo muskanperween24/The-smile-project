@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/about'
 import Programs from './components/Program'
+import Contact from './components/Contact'
+import Team from './components/Team'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -22,10 +24,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
-          {/* TODO: Friends will add these routes when components are ready */}
-          {/* <Route path="/team" element={<Team />} /> */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          {/* TODO: Add donate route when component is ready */}
           {/* <Route path="/donate" element={<Donate />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
         <Footer />
       </div>
