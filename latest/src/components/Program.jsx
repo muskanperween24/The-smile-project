@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Program.css";
 
-const ProgramsPage = () => {
+const Program = () => {
   const [showForm, setShowForm] = useState(false);
 
   const openJoinForm = () => setShowForm(!showForm);
@@ -103,4 +103,4 @@ const ProgramsPage = () => {
   );
 };
 
-export default ProgramsPage;
+export default Program;
