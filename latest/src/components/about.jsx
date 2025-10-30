@@ -4,9 +4,11 @@ import "./about.css";
 const About = () => {
   return (
     <div>
-      {/* 🔹 Hero Banner with Gradient Background */}
+      {/* 🔹 Hero Banner with Background Image */}
       <section className="hero-section" style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        backgroundImage: 'url("/student3.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         minHeight: '400px',
         display: 'flex',
         alignItems: 'center',
@@ -74,6 +76,67 @@ const About = () => {
               </p>
             </div>
           </div>
+
+{/* Our Approach */}
+
+          <div className="about-row">
+            <div className="about-text">
+              <h2>Our Approach – The Project Smile</h2>
+              
+              <div className="approach-item">
+                <h3><strong>Education Support:</strong></h3>
+                <p>We help dropped-out and poor students to continue their studies through free classes, guidance, and school material.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Women & Girl Empowerment:</strong></h3>
+                <p>We focus on girls' education, awareness, and vocational training so that women can become strong and independent.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Health & Medical Care:</strong></h3>
+                <p>We organize health camps, awareness drives, and provide medical help to rural and needy people.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Old Age & Orphan Care:</strong></h3>
+                <p>We provide food, shelter, and emotional care to orphans and elderly people who are left alone.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Youth Skill Development:</strong></h3>
+                <p>We run training programs, workshops, and sports like Kung-Fu and Taekwondo to build youth confidence and skills.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Social Awareness:</strong></h3>
+                <p>We conduct programs to spread awareness about education, politics, health, environment, and human rights.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Legal & Human Rights Aid:</strong></h3>
+                <p>We help poor prisoners and innocent people get justice and legal assistance.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Environment Protection:</strong></h3>
+                <p>We plant trees, manage waste, and spread awareness to protect nature and keep our surroundings clean.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>Disaster Relief:</strong></h3>
+                <p>We provide help during floods, earthquakes, and other disasters through rescue, relief, and rebuilding work.</p>
+              </div>
+              
+              <div className="approach-item">
+                <h3><strong>No Profit – No Loss Work Model:</strong></h3>
+                <p>All our programs run only for public welfare — not for money or personal benefit — ensuring honesty and transparency.</p>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
       </section>
     </div>

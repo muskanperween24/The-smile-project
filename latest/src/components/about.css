@@ -48,7 +48,10 @@
 
 /* About Section */
 .about-section {
-  background: #dedcf1;
+  background: linear-gradient(rgba(222, 220, 241, 0.9), rgba(222, 220, 241, 0.9)), url('/student3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 50px 10px;
   max-width: 900px;
   margin: -120px auto 60px;
@@ -98,4 +101,33 @@
 .about-text p {
   line-height: 1.7;
   margin-bottom: 12px;
+}
+
+/* Approach Items Styling */
+.approach-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid #0d9488;
+  transition: all 0.3s ease;
+}
+
+.approach-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+}
+
+.approach-item h3 {
+  color: #0d9488;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.approach-item p {
+  margin-bottom: 0;
+  color: #374151;
+  line-height: 1.6;
 }
