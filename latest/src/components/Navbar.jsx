@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="nav-menu desktop-menu">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <a href="#programs">Programs</a>
+            <Link to="/programs">Programs</Link>
             <a href="#team">Team</a>
             <a href="#get-involved">Donate</a>
             <a href="#contact" className="contact-btn">Contact</a>
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="mobile-menu">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <a href="#programs" onClick={() => setIsMenuOpen(false)}>Programs</a>
+            <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
             <a href="#team" onClick={() => setIsMenuOpen(false)}>Team</a>
             <a href="#get-involved" onClick={() => setIsMenuOpen(false)}>Donate</a>
             <a href="#contact" className="contact-btn" onClick={() => setIsMenuOpen(false)}>Contact</a>
