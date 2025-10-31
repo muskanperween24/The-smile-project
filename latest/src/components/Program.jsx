@@ -106,7 +106,7 @@ const Program = () => {
                  title: "Disaster Relief & Management",
                  desc: "Natural disaster ke time relief aur recovery ka kaam karna.",
                },
-
+               
             ].map((p, i) => (
               <article key={i} className="program-card">
                 <div className="icon">{p.icon}</div>

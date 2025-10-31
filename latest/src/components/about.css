@@ -36,7 +36,7 @@
 
 .hero-text h1 {
   font-size: 3rem;
-  border-bottom: 4px solid #3b82f6;
+  border-bottom: px solid #f0f2f5;
   display: inline-block;
   margin-bottom: 10px;
 }
@@ -51,7 +51,7 @@
 .about-section {
   background: #dedcf1;
   padding: 50px 10px;
-  max-width: 1500px;
+  max-width: 1300px;
   margin: -120px auto 60px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -102,19 +102,28 @@
 }
 
 /* Approach Items Styling */
+.approach-section {
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.approach-section h2 {
+  text-align: center;
+  color: #0d9488;
+  margin-bottom: 0px;
+  font-size: 2rem;
+  
+}
+
 .approach-item {
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   border-left: 4px solid #0d9488;
-  transition: all 0.3s ease;
-}
-
-.approach-item:hover {
-  background: rgba(255, 255, 255, 0.5);
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+  background-color: #ebeffd;
 }
 
 .approach-item h3 {
