@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { saveContactForm } from '../firebaseConfig';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,45 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitResult, setSubmitResult] = useState("");
+
+  // Web3Forms Configuration
+  const WEB3FORMS_ACCESS_KEY = "7a538f0b-1046-4564-b673-806ca0e94836";
+
+  const sendWeb3FormsEmail = async (formData) => {
+    try {
+      console.log('📧 Sending email via Web3Forms...');
+      
+      const web3FormData = new FormData();
+      web3FormData.append("access_key", WEB3FORMS_ACCESS_KEY);
+      web3FormData.append("name", formData.name);
+      web3FormData.append("email", formData.email);
+      web3FormData.append("phone", formData.phone || 'Not provided');
+      web3FormData.append("message", formData.message);
+      web3FormData.append("subject", `New Contact Form Submission from ${formData.name}`);
+      web3FormData.append("from_name", "The Project Smile Website");
+      web3FormData.append("to_email", "muskanperween24@navgurukul.org");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: web3FormData
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        console.log('✅ Email sent successfully via Web3Forms');
+        return { success: true };
+      } else {
+        console.error('❌ Web3Forms email sending failed:', result);
+        return { success: false, error: result.message || 'Failed to send email' };
+      }
+    } catch (error) {
+      console.error('❌ Web3Forms API request failed:', error);
+      return { success: false, error: `API Error: ${error.message}` };
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -17,26 +57,58 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add actual form submission logic here
-    alert('Message sent successfully!');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-  };
-
-  const handleWhatsAppMessage = () => {
-    const message = encodeURIComponent('Hi, I would like to know more about The Project Smile.');
-    const phoneNumber = '911234567890'; // Replace with actual WhatsApp number
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    setIsSubmitting(true);
+    setSubmitResult("Sending message...");
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitResult("Please fill in all required fields.");
+      setIsSubmitting(false);
+      return;
+    }
+    
+    try {
+      console.log('📝 Submitting form data:', formData);
+      
+      // Save to Firebase first
+      const firebaseResult = await saveContactForm(formData);
+      
+      if (firebaseResult.success) {
+        console.log('✅ Data saved to Firebase');
+        
+        // Send email notification via Web3Forms
+        const emailResult = await sendWeb3FormsEmail(formData);
+        
+        if (emailResult.success) {
+          setSubmitResult("✅ Message sent successfully! We will get back to you soon.");
+          
+          // Reset form after successful submission
+          setTimeout(() => {
+            setFormData({
+              name: '',
+              email: '',
+              phone: '',
+              message: ''
+            });
+            setSubmitResult("");
+          }, 3000);
+          
+        } else {
+          setSubmitResult("✅ Message saved! We received your message and will contact you soon.");
+          console.log('Email may have failed but Firebase saved the data');
+        }
+      } else {
+        setSubmitResult("❌ Failed to send message. Please try again.");
+        console.error('Firebase save failed:', firebaseResult.error);
+      }
+    } catch (error) {
+      console.error('❌ Error submitting form:', error);
+      setSubmitResult("❌ Error sending message. Please try again.");
+    }
+    
+    setIsSubmitting(false);
   };
 
   return (
@@ -101,46 +173,17 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="send-message-btn">
-                <span>✈</span> Send Message
+              <button type="submit" className="send-message-btn" disabled={isSubmitting}>
+                <span>{isSubmitting ? '⏳' : '✈'}</span> 
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+              
+              {submitResult && (
+                <div className={`submit-result ${submitResult.includes('✅') ? 'success' : 'error'}`}>
+                  {submitResult}
+                </div>
+              )}
             </form>
-          </div>
-
-          <div className="contact-info-section">
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <span>📧</span>
-              </div>
-              <div className="contact-details">
-                <h3>Email</h3>
-                <p>info@projectsmilepathways.org</p>
-              </div>
-            </div>
-
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <span>📞</span>
-              </div>
-              <div className="contact-details">
-                <h3>Phone</h3>
-                <p>+91 123 456 7890</p>
-              </div>
-            </div>
-
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <span>📍</span>
-              </div>
-              <div className="contact-details">
-                <h3>Address</h3>
-                <p>New Delhi, India</p>
-              </div>
-            </div>
-
-            <button className="whatsapp-btn" onClick={handleWhatsAppMessage}>
-              <span>💬</span> Message on WhatsApp
-            </button>
           </div>
         </div>
 
