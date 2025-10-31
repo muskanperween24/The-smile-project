@@ -6,7 +6,7 @@ const About = () => {
     <div>
       {/* 🔹 Hero Banner with Background Image */}
       <section className="hero-section" style={{
-        backgroundImage: 'url("/student3.jpg")',
+        backgroundImage: 'url("/img12.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: '400px',
@@ -33,7 +33,7 @@ const About = () => {
           {/* Left Image + Right Text */}
           <div className="about-row">
             <div className="about-img">
-              <img src="/student 2.jpeg" alt="Our Work" />
+              <img src="/img2.jpg" alt="Our Work" />
             </div>
             <div className="about-text">
               <h2>About The Project Smile</h2>
@@ -54,7 +54,7 @@ const About = () => {
           {/* Why We Are Doing This */}
           <div className="about-row reverse">
             <div className="about-img">
-              <img src="/images (2).jpeg" alt="Our Team" />
+              <img src="/img6.jpg" alt="Our Team" />
             </div>
             <div className="about-text">
               <h2>Why We Are Doing This</h2>
