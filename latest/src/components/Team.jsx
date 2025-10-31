@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Team.css';
 
 const Team = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (member) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedMember(null);
+  };
   // Trustees
   const trustees = [
     {
@@ -90,7 +102,7 @@ const Team = () => {
                 <h3 className="member-name">{member.name}</h3>
                 <p className="member-role">{member.role}</p>
                 <p className="member-description">{member.description}</p>
-                <button className="read-more-btn">Read more</button>
+                <button className="read-more-btn" onClick={() => openModal(member)}>Read more</button>
               </div>
             </div>
           ))}
@@ -102,7 +114,7 @@ const Team = () => {
         <div className="section-header">
           <h2>Founders & Leadership</h2>
         </div>
-        <div className="team-members-grid">
+        <div className={`team-members-grid ${founders.length === 3 ? 'three-items' : ''}`}>
           {founders.map((member) => (
             <div key={member.id} className="team-member-card">
               <div className="member-image">
@@ -112,12 +124,33 @@ const Team = () => {
                 <h3 className="member-name">{member.name}</h3>
                 <p className="member-role">{member.role}</p>
                 <p className="member-description">{member.description}</p>
-                <button className="read-more-btn">Read more</button>
+                <button className="read-more-btn" onClick={() => openModal(member)}>Read more</button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && selectedMember && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>×</button>
+            <div className="modal-header">
+              <div className="modal-image">
+                <img src={selectedMember.image} alt={selectedMember.name} />
+              </div>
+              <div className="modal-info">
+                <h2>{selectedMember.name}</h2>
+                <p className="modal-role">{selectedMember.role}</p>
+              </div>
+            </div>
+            <div className="modal-body">
+              <p>{selectedMember.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

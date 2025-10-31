@@ -29,8 +29,7 @@ const Navbar = () => {
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/programs" className="nav-link">Programs</Link>
             <Link to="/team" className="nav-link">Team</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
-            <button className="join-us-btn">Join Us</button>
+            <Link to="/contact" className="join-us-btn">Join Us</Link>
             <button className="donate-btn">Donate Now</button>
           </div>
 
@@ -47,8 +46,7 @@ const Navbar = () => {
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
             <Link to="/team" onClick={() => setIsMenuOpen(false)}>Team</Link>
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-            <button className="join-us-btn mobile" onClick={() => setIsMenuOpen(false)}>Join Us</button>
+            <Link to="/contact" className="join-us-btn mobile" onClick={() => setIsMenuOpen(false)}>Join Us</Link>
             <button className="donate-btn mobile" onClick={() => setIsMenuOpen(false)}>Donate Now</button>
           </div>
         )}
