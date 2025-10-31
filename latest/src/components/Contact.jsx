@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import { saveContactForm } from '../firebaseConfig';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,36 +10,42 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitResult, setSubmitResult] = useState("");
 
-  // EmailJS Configuration - Replace with your actual EmailJS credentials
-  const EMAILJS_SERVICE_ID = 'service_8x7mltp'; // Demo service ID
-  const EMAILJS_TEMPLATE_ID = 'template_nv7k7mj'; // Demo template ID  
-  const EMAILJS_PUBLIC_KEY = 'SybVoyAGepQO7wiR9'; // Demo public key
+  // Web3Forms Configuration
+  const WEB3FORMS_ACCESS_KEY = "7a538f0b-1046-4564-b673-806ca0e94836";
 
-  const sendEmailNotification = async (formData) => {
+  const sendWeb3FormsEmail = async (formData) => {
     try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone || 'Not provided',
-        message: formData.message,
-        to_name: 'Muskan Perween',
-        to_email: 'muskanperween24@navgurukul.org',
-        reply_to: formData.email
-      };
+      console.log('📧 Sending email via Web3Forms...');
+      
+      const web3FormData = new FormData();
+      web3FormData.append("access_key", WEB3FORMS_ACCESS_KEY);
+      web3FormData.append("name", formData.name);
+      web3FormData.append("email", formData.email);
+      web3FormData.append("phone", formData.phone || 'Not provided');
+      web3FormData.append("message", formData.message);
+      web3FormData.append("subject", `New Contact Form Submission from ${formData.name}`);
+      web3FormData.append("from_name", "The Project Smile Website");
+      web3FormData.append("to_email", "muskanperween24@navgurukul.org");
 
-      const response = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: web3FormData
+      });
 
-      console.log('Email sent successfully:', response);
-      return { success: true };
+      const result = await response.json();
+      
+      if (result.success) {
+        console.log('✅ Email sent successfully via Web3Forms');
+        return { success: true };
+      } else {
+        console.error('❌ Web3Forms email sending failed:', result);
+        return { success: false, error: result.message || 'Failed to send email' };
+      }
     } catch (error) {
-      console.error('Email sending failed:', error);
-      return { success: false, error: error.message };
+      console.error('❌ Web3Forms API request failed:', error);
+      return { success: false, error: `API Error: ${error.message}` };
     }
   };
 
@@ -55,43 +60,52 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitResult("Sending message...");
     
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill in all required fields.');
+      setSubmitResult("Please fill in all required fields.");
       setIsSubmitting(false);
       return;
     }
     
     try {
-      console.log('Submitting form data:', formData);
+      console.log('📝 Submitting form data:', formData);
       
-      // Save to Firebase
+      // Save to Firebase first
       const firebaseResult = await saveContactForm(formData);
       
       if (firebaseResult.success) {
-        // Send email notification to muskanperween24@navgurukul.org
-        const emailResult = await sendEmailNotification(formData);
+        console.log('✅ Data saved to Firebase');
+        
+        // Send email notification via Web3Forms
+        const emailResult = await sendWeb3FormsEmail(formData);
         
         if (emailResult.success) {
-          alert('Message sent successfully! We will get back to you soon.\nEmail notification sent to our team.');
+          setSubmitResult("✅ Message sent successfully! We will get back to you soon.");
+          
+          // Reset form after successful submission
+          setTimeout(() => {
+            setFormData({
+              name: '',
+              email: '',
+              phone: '',
+              message: ''
+            });
+            setSubmitResult("");
+          }, 3000);
+          
         } else {
-          alert('Message saved successfully! We will get back to you soon.\n(Email notification may have failed, but we received your message.)');
+          setSubmitResult("✅ Message saved! We received your message and will contact you soon.");
+          console.log('Email may have failed but Firebase saved the data');
         }
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
       } else {
-        alert('Failed to send message: ' + firebaseResult.error);
+        setSubmitResult("❌ Failed to send message. Please try again.");
+        console.error('Firebase save failed:', firebaseResult.error);
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Error sending message. Please try again.');
+      console.error('❌ Error submitting form:', error);
+      setSubmitResult("❌ Error sending message. Please try again.");
     }
     
     setIsSubmitting(false);
@@ -163,39 +177,13 @@ const Contact = () => {
                 <span>{isSubmitting ? '⏳' : '✈'}</span> 
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+              
+              {submitResult && (
+                <div className={`submit-result ${submitResult.includes('✅') ? 'success' : 'error'}`}>
+                  {submitResult}
+                </div>
+              )}
             </form>
-          </div>
-
-          <div className="contact-info-section">
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <span>📧</span>
-              </div>
-              <div className="contact-details">
-                <h3>Email</h3>
-                <p>info@projectsmilepathways.org</p>
-              </div>
-            </div>
-
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <span>📞</span>
-              </div>
-              <div className="contact-details">
-                <h3>Phone</h3>
-                <p>+91 123 456 7890</p>
-              </div>
-            </div>
-
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <span>📍</span>
-              </div>
-              <div className="contact-details">
-                <h3>Address</h3>
-                <p>New Delhi, India</p>
-              </div>
-            </div>
           </div>
         </div>
 
