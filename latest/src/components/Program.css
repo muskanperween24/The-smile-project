@@ -22,14 +22,11 @@ body {
 }
 
 @keyframes slideshow {
-  0%, 30% {
-    background-image: url('/student4.jpg');
+  0%, 45% {
+    background-image: url('/stu.png');
   }
-  34%, 60% {
-    background-image: url('/student5.jpg');
-  }
-  67%, 100% {
-    background-image: url('/student7.jpg');
+  50%, 100% {
+    background-image: url('/img13.jpg');
   }
 }
 .header h1 {
@@ -49,11 +46,11 @@ body {
   transition: 0.3s;
 }
 .btn.join {
-  background-color: #facc15;
+  background-color: #6f0bb1;
   color: black;
 }
 .btn.join:hover {
-  background-color: #fde047;
+  background-color: #8564e2;
 }
 .btn.volunteer {
   background-color: white;
@@ -142,6 +139,17 @@ body {
 .program-card .icon {
   font-size: 1.5rem;
   color: #595bd6;
+}
+
+.program-content {
+  margin-top: 12px;
+}
+
+.program-line {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #374151;
 }
 
 /* 🌟 Success Story */

@@ -6,7 +6,7 @@ const About = () => {
     <div>
       {/* 🔹 Hero Banner with Background Image */}
       <section className="hero-section" style={{
-        backgroundImage: 'url("/student3.jpg")',
+        backgroundImage: 'url("/img12.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: '400px',
@@ -33,7 +33,7 @@ const About = () => {
           {/* Left Image + Right Text */}
           <div className="about-row">
             <div className="about-img">
-              <img src="/student 2.jpeg" alt="Our Work" />
+              <img src="/img2.jpg" alt="Our Work" />
             </div>
             <div className="about-text">
               <h2>About The Project Smile</h2>
@@ -54,7 +54,7 @@ const About = () => {
           {/* Why We Are Doing This */}
           <div className="about-row reverse">
             <div className="about-img">
-              <img src="/images (2).jpeg" alt="Our Team" />
+              <img src="/img6.jpg" alt="Our Team" />
             </div>
             <div className="about-text">
               <h2>Why We Are Doing This</h2>
@@ -77,68 +77,66 @@ const About = () => {
             </div>
           </div>
 
+  </div>
+      </section>
 {/* Our Approach */}
-
-          <div className="about-row">
-            <div className="about-text">
-              <h2>Our Approach – The Project Smile</h2>
-              
-              <div className="approach-item">
-                <h3><strong>Education Support:</strong></h3>
-                <p>We help dropped-out and poor students to continue their studies through free classes, guidance, and school material.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Women & Girl Empowerment:</strong></h3>
-                <p>We focus on girls' education, awareness, and vocational training so that women can become strong and independent.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Health & Medical Care:</strong></h3>
-                <p>We organize health camps, awareness drives, and provide medical help to rural and needy people.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Old Age & Orphan Care:</strong></h3>
-                <p>We provide food, shelter, and emotional care to orphans and elderly people who are left alone.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Youth Skill Development:</strong></h3>
-                <p>We run training programs, workshops, and sports like Kung-Fu and Taekwondo to build youth confidence and skills.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Social Awareness:</strong></h3>
-                <p>We conduct programs to spread awareness about education, politics, health, environment, and human rights.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Legal & Human Rights Aid:</strong></h3>
-                <p>We help poor prisoners and innocent people get justice and legal assistance.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Environment Protection:</strong></h3>
-                <p>We plant trees, manage waste, and spread awareness to protect nature and keep our surroundings clean.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>Disaster Relief:</strong></h3>
-                <p>We provide help during floods, earthquakes, and other disasters through rescue, relief, and rebuilding work.</p>
-              </div>
-              
-              <div className="approach-item">
-                <h3><strong>No Profit – No Loss Work Model:</strong></h3>
-                <p>All our programs run only for public welfare — not for money or personal benefit — ensuring honesty and transparency.</p>
-              </div>
+          <div className="approach-section">
+            <h2>Our Approach – The Project Smile</h2>
+            
+            <div className="approach-item">
+              <h3><strong>Education Support:</strong></h3>
+              <p>We help dropped-out and poor students to continue their studies through free classes, guidance, and school material.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Women & Girl Empowerment:</strong></h3>
+              <p>We focus on girls' education, awareness, and vocational training so that women can become strong and independent.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Health & Medical Care:</strong></h3>
+              <p>We organize health camps, awareness drives, and provide medical help to rural and needy people.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Old Age & Orphan Care:</strong></h3>
+              <p>We take care of orphans and elderly people who have no one to look after them.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Youth Skill Development:</strong></h3>
+              <p>We run training programs, workshops, and sports like Kung-Fu and Taekwondo to build youth confidence and skills.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Social Awareness:</strong></h3>
+              <p>We conduct programs to spread awareness about education, politics, health, environment, and human rights.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Legal & Human Rights Aid:</strong></h3>
+              <p>We help poor prisoners and innocent people get justice and legal assistance.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Environment Protection:</strong></h3>
+              <p>We plant trees, manage waste, and spread awareness to protect nature and keep our surroundings clean.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>Disaster Relief:</strong></h3>
+              <p>We provide help during floods, earthquakes, and other disasters through rescue, relief, and rebuilding work.</p>
+            </div>
+            
+            <div className="approach-item">
+              <h3><strong>No Profit – No Loss Work Model:</strong></h3>
+              <p>All our programs run only for public welfare — not for money or personal benefit — ensuring honesty and transparency.</p>
             </div>
           </div>
 
 
 
-        </div>
-      </section>
+      
     </div>
   );
 };
