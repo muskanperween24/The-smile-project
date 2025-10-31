@@ -240,7 +240,27 @@
   line-height: 1.8;
   text-align: center;
   max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.read-more-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
   margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.read-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .programs-section {
@@ -254,6 +274,12 @@
   text-align: center;
   color: #1e40af;
   margin-bottom: 1.5rem;
+}
+
+.programs-full-width {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 2rem; /* Only minimal padding like stats section */
 }
 
 .programs-grid {
@@ -695,65 +721,7 @@
   font-weight: 600;
 }
 
-/* Get Involved Section */
-.get-involved-section {
-  padding: 20px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-}
 
-.get-involved-section h2 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.get-involved-section > .container > p {
-  text-align: center;
-  font-size: 1.3rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
-}
-
-.involvement-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.involvement-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.involvement-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.involvement-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.involvement-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.involvement-card p {
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
 
 /* News Section */
 .news-section {
@@ -833,6 +801,233 @@
   color: #1d4ed8;
 }
 
+/* Programs Slider Styles - Modern Design */
+.programs-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+  padding: 0; /* Remove side padding for full width */
+}
+
+.programs-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1.5rem;
+  padding: 0 3rem; /* Space for navigation buttons */
+}
+
+.program-slide {
+  flex: 0 0 calc(20% - 1.2rem); /* Show 5 cards at once */
+  min-width: 0;
+}
+
+.program-card-modern {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.program-card-modern:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+.program-icon-large {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.program-card-modern h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.program-card-modern p {
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.know-more-btn {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.know-more-btn:hover {
+  background: #1e293b;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* Program Slider Navigation */
+.program-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000000;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.program-slider-btn:hover {
+  background: #1e293b;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.program-slider-btn.prev-btn {
+  left: 1rem;
+}
+
+.program-slider-btn.next-btn {
+  right: 1rem;
+}
+
+/* Program Slider Dots */
+.program-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.program-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.program-dot.active {
+  background: #3b82f6;
+  transform: scale(1.2);
+}
+
+.program-dot:hover {
+  background: #64748b;
+}
+
+/* Mobile Responsive for Programs Slider */
+@media (max-width: 768px) {
+  .programs-full-width {
+    padding: 0 1rem;
+  }
+  
+  .programs-container {
+    padding: 0 2.5rem;
+    gap: 1rem;
+  }
+  
+  .program-slide {
+    flex: 0 0 100%; /* Show 1 card on mobile */
+  }
+  
+  .program-slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .program-slider-btn.prev-btn {
+    left: 0.5rem;
+  }
+
+  .program-slider-btn.next-btn {
+    right: 0.5rem;
+  }
+  
+  .program-card-modern {
+    padding: 2rem 1.25rem;
+    min-height: 280px;
+  }
+  
+  .program-icon-large {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .program-card-modern h3 {
+    font-size: 1.2rem;
+  }
+  
+  .program-card-modern p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .program-slide {
+    flex: 0 0 calc(33.333% - 1rem); /* Show 3 cards on tablet */
+  }
+  
+  .programs-full-width {
+    padding: 0 1.5rem;
+  }
+  
+  .programs-container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .program-slide {
+    flex: 0 0 calc(25% - 1rem); /* Show 4 cards on smaller desktop */
+  }
+}
+
 /* Responsive Updates */
 @media (max-width: 768px) {
   /* Slider responsive */
@@ -874,10 +1069,6 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  
-  .involvement-grid {
-    grid-template-columns: 1fr;
   }
   
   .news-grid {
