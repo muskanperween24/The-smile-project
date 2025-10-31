@@ -152,8 +152,8 @@ const Home = () => {
             {sliderImages[currentSlide].description}
           </p>
           <div className="hero-buttons">
-            <button className="btn-primary">Learn More</button>
-            <button className="btn-secondary">Donate Now</button>
+            <Link to="/about" className="btn-primary">Learn More</Link>
+            <Link to="/donate" className="btn-secondary">Donate Now</Link>
           </div>
         </div>
       </div>

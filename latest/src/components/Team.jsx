@@ -20,28 +20,28 @@ const Team = () => {
       id: 1,
       name: "MD SAKIM",
       role: "Trustee",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/sajid-hussain.png",
       description: "Dedicated trustee committed to the organization's mission and vision, bringing valuable guidance and oversight to our initiatives."
     },
     {
       id: 2,
       name: "SAJID HUSSAIN",
       role: "Trustee",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/sajid-hussain.png",
       description: "Experienced trustee who provides strategic direction and ensures ethical governance in all organizational activities."
     },
     {
       id: 3,
       name: "ROHAN KUMAR PANDIT",
       role: "Trustee",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/rohan-kumar-pandit.png",
       description: "Brings a deep-rooted sense of responsibility and burgeoning confidence to his work as trustee, ensuring organizational accountability."
     },
     {
       id: 4,
       name: "SANGITA KUMARI",
       role: "Trustee",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/sangita-kumari.png",
       description: "Passionate trustee focused on community development and ensuring the organization's programs reach those who need them most."
     }
   ];
@@ -52,21 +52,21 @@ const Team = () => {
       id: 1,
       name: "MD MEHRUDDIN",
       role: "Founder/Chairman",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/md-mehruddin.png",
       description: "Madad, mehnat aur mannat (help and hard work, good wishes) are never wasted. If people achieve their dreams through my work, my dream would be achieved."
     },
     {
       id: 2,
       name: "SHAJAHAN ALI",
       role: "Co-Founder/Secretary",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/images/shajahan-ali.png",
       description: "Co-founder dedicated to building sustainable programs and ensuring effective coordination between all organizational activities."
     },
     {
       id: 3,
       name: "MD SAIDUL HAQUE",
       role: "Treasurer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "",
       description: "Experienced treasurer ensuring financial transparency and efficient resource management for maximum impact in community programs."
     }
   ];

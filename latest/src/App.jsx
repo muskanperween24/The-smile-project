@@ -6,6 +6,8 @@ import About from './components/about'
 import Program from './components/Program'
 import Contact from './components/Contact'
 import Team from './components/Team'
+import Join from './components/Join'
+import Donate from './components/Donate'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -20,8 +22,8 @@ function App() {
           <Route path="/programs" element={<Program />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
-          {/* TODO: Add donate route when component is ready */}
-          {/* <Route path="/donate" element={<Donate />} /> */}
+          <Route path="/join" element={<Join />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
         <Footer />
       </div>
