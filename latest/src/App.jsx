@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Team from './components/Team'
 import Join from './components/Join'
 import Donate from './components/Donate'
+import LearnMore from './components/LearnMore'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/join" element={<Join />} />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/learn-more" element={<LearnMore />} />
         </Routes>
         <Footer />
       </div>

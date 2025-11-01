@@ -27,6 +27,27 @@ body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Global responsive container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 3rem;
+  }
 }
 
 /* Global Heading Styles */

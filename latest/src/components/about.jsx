@@ -81,7 +81,8 @@ const About = () => {
       </section>
 {/* Our Approach */}
           <div className="approach-section">
-            <h2>Our Approach – The Project Smile</h2>
+            <h2>Our Approach</h2>
+            <br />
             
             <div className="approach-item">
               <h3><strong>Education Support:</strong></h3>
