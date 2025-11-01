@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 110px; /* slightly larger navbar */
   width: 100%;
   padding: 0;
 }
@@ -26,22 +26,57 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  margin-left: 0;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   text-decoration: none;
   color: inherit;
   transition: all 0.4s ease;
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 15px;
   position: relative;
   overflow: hidden;
 }
 
+.donate-btn {
+  /* changed to theme blue */
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+.donate-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.donate-btn:hover::before {
+  left: 0;
+}
+
+.donate-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
 .logo-link::before {
   content: '';
   position: absolute;
@@ -79,7 +114,7 @@
 }
 
 .logo-text {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 900;
   background: linear-gradient(135deg, #2563eb, #8b5cf6, #f59e0b);
   background-clip: text;
@@ -111,6 +146,7 @@
   text-decoration: none !important;
   color: #374151 !important;
   font-weight: 600;
+  font-size: 1.05rem; /* increased font size for better readability */
   padding: 0.75rem 1.25rem;
   border-radius: 25px;
   transition: all 0.4s ease;
@@ -138,6 +174,13 @@
   color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Active link (persisting when the route is active) */
+.nav-link.active {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
 }
 
 /* Join Us Button */
@@ -178,80 +221,61 @@
 }
 
 /* Donate Button */
-.donate-btn {
-  background: linear-gradient(135deg, #f97316, #ea580c);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.donate-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #ea580c, #dc2626);
-  transition: all 0.4s ease;
-  z-index: -1;
-}
-
-.donate-btn:hover::before {
-  left: 0;
-}
-
-.donate-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-}
+/* (duplicate orange donate styles removed; themed donate styles are defined above) */
 
 .mobile-menu-btn {
   display: none;
 }
 
 .mobile-menu-btn button {
-  background: none;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   border: none;
-  font-size: 1.5rem;
-  color: #374151;
+  font-size: 1.8rem;
+  color: white;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn button:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  background-color: #f9fafb;
-  border-radius: 8px;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
   margin-top: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .mobile-menu a,
 .mobile-menu a:visited {
   text-decoration: none;
   color: #374151;
-  font-weight: 500;
-  padding: 0.75rem;
-  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 8px;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .mobile-menu a:hover,
 .mobile-menu a:focus {
-  background-color: #3b82f6;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
 /* Mobile Buttons */
@@ -276,21 +300,21 @@
   }
   
   .nav-content {
-    height: 70px;
+    height: 80px;
   }
   
   .logo-text {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
   }
   
   .logo-img {
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: auto;
   }
   
   .logo-link {
-    gap: 8px;
+    gap: 10px;
   }
   
   .desktop-menu {
@@ -336,5 +360,11 @@
   
   .mobile-menu {
     display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: flex !important;
   }
 }

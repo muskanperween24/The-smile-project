@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,11 +25,11 @@ const Navbar = () => {
           </div>
 
           <div className="nav-menu desktop-menu">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/programs" className="nav-link">Programs</Link>
-            <Link to="/team" className="nav-link">Team</Link>
-              <Link to="/contact" className="nav-link">Contact Us </Link>
+            <NavLink to="/" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'} end>Home</NavLink>
+            <NavLink to="/about" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+            <NavLink to="/programs" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Programs</NavLink>
+            <NavLink to="/team" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Team</NavLink>
+            <NavLink to="/contact" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Contact Us</NavLink>
             <Link to="/join" className="join-us-btn">Join Us</Link>
             <Link to="/donate" className="donate-btn">Donate Now</Link>
           </div>
