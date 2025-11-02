@@ -191,15 +191,15 @@ const Contact = () => {
         <div className="map-section">
           <div className="map-header">
             <h2>Find Us Here</h2>
-            <p>Visit us at our location in New Delhi</p>
+            <p>Visit us at our location in Kishanganj, Bihar</p>
           </div>
           
           <div className="map-container">
             <div className="map-overlay">
               <div className="map-info">
                 <h3>📍 Our Location</h3>
-                <p>New Delhi, India</p>
-                <button className="directions-btn" onClick={() => window.open('https://maps.google.com/?q=New+Delhi,India', '_blank')}>
+                <p>VILL- DALUA HAT, P.O-TAIYABPUR, P.S-ROTHIA, Distt.- KISHANGANJ, PIN-855117 (BIHAR)</p>
+                <button className="directions-btn" onClick={() => window.open('https://maps.google.com/?q=DALUA+HAT,+TAIYABPUR,+KISHANGANJ,+BIHAR,+855117', '_blank')}>
                   <span>🧭</span> Get Directions
                 </button>
               </div>
@@ -207,14 +207,14 @@ const Contact = () => {
             
             <div className="map-frame">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.8397262629!2d77.06889754725782!3d28.52758200617607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1699634400000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114346.75084631098!2d87.84309087343751!3d26.107978999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e58b1c9131b715%3A0x1f6d9b6b1f9e2b3c!2sKishanganj%2C%20Bihar!5e0!3m2!1sen!2sin!4v1699634400000!5m2!1sen!2sin"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="The Project Smile Location"
+                title="The Project Smile Location - Kishanganj, Bihar"
               ></iframe>
             </div>
           </div>
