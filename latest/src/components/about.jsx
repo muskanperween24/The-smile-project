@@ -84,54 +84,67 @@ const About = () => {
             <h2>Our Approach</h2>
             <br />
             
-            <div className="approach-item">
-              <h3><strong>Education Support:</strong></h3>
-              <p>We help dropped-out and poor students to continue their studies through free classes, guidance, and school material.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Women & Girl Empowerment:</strong></h3>
-              <p>We focus on girls' education, awareness, and vocational training so that women can become strong and independent.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Health & Medical Care:</strong></h3>
-              <p>We organize health camps, awareness drives, and provide medical help to rural and needy people.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Old Age & Orphan Care:</strong></h3>
-              <p>We take care of orphans and elderly people who have no one to look after them.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Youth Skill Development:</strong></h3>
-              <p>We run training programs, workshops, and sports like Kung-Fu and Taekwondo to build youth confidence and skills.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Social Awareness:</strong></h3>
-              <p>We conduct programs to spread awareness about education, politics, health, environment, and human rights.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Legal & Human Rights Aid:</strong></h3>
-              <p>We help poor prisoners and innocent people get justice and legal assistance.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Environment Protection:</strong></h3>
-              <p>We plant trees, manage waste, and spread awareness to protect nature and keep our surroundings clean.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>Disaster Relief:</strong></h3>
-              <p>We provide help during floods, earthquakes, and other disasters through rescue, relief, and rebuilding work.</p>
-            </div>
-            
-            <div className="approach-item">
-              <h3><strong>No Profit – No Loss Work Model:</strong></h3>
-              <p>All our programs run only for public welfare — not for money or personal benefit — ensuring honesty and transparency.</p>
+            <div className="approach-grid">
+              {[
+                {
+                  icon: "📚",
+                  title: "Education Support",
+                  desc: "We help dropped-out and poor students to continue their studies through free classes, guidance, and school material.",
+                },
+                {
+                  icon: "👩‍💼",
+                  title: "Women & Girl Empowerment",
+                  desc: "We focus on girls' education, awareness, and vocational training so that women can become strong and independent.",
+                },
+                {
+                  icon: "🏥",
+                  title: "Health & Medical Care",
+                  desc: "We organize health camps, awareness drives, and provide medical help to rural and needy people.",
+                },
+                {
+                  icon: "👴",
+                  title: "Old Age & Orphan Care",
+                  desc: "We take care of orphans and elderly people who have no one to look after them.",
+                },
+                {
+                  icon: "🎯",
+                  title: "Youth Skill Development",
+                  desc: "We run training programs, workshops, and sports like Kung-Fu and Taekwondo to build youth confidence and skills.",
+                },
+                {
+                  icon: "📢",
+                  title: "Social Awareness",
+                  desc: "We conduct programs to spread awareness about education, politics, health, environment, and human rights.",
+                },
+                {
+                  icon: "⚖️",
+                  title: "Legal & Human Rights Aid",
+                  desc: "We help poor prisoners and innocent people get justice and legal assistance.",
+                },
+                {
+                  icon: "🌱",
+                  title: "Environment Protection",
+                  desc: "We plant trees, manage waste, and spread awareness to protect nature and keep our surroundings clean.",
+                },
+                {
+                  icon: "🚨",
+                  title: "Disaster Relief",
+                  desc: "We provide help during floods, earthquakes, and other disasters through rescue, relief, and rebuilding work.",
+                },
+                {
+                  icon: "🤝",
+                  title: "No Profit – No Loss Work Model",
+                  desc: "All our programs run only for public welfare — not for money or personal benefit — ensuring honesty and transparency.",
+                }
+              ].map((approach, i) => (
+                <article key={i} className="approach-card">
+                  <div className="icon">
+                    <span style={{fontSize: '60px'}}>{approach.icon}</span>
+                  </div>
+                  <h3>{approach.title}</h3>
+                  <p>{approach.desc}</p>
+                </article>
+              ))}
             </div>
           </div>
 

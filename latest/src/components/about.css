@@ -36,20 +36,20 @@
 
 .hero-text h1 {
   font-size: 3rem;
-  border-bottom: px solid #f0f2f5;
+  border-bottom: px solid #22aa76;
   display: inline-block;
   margin-bottom: 10px;
-  color: #ffd700;
-  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
+  color: #047857;
+  text-shadow: 2px 2px 8px rgba(19, 194, 106, 0.8), 0 0 20px rgba(68, 180, 128, 0.5);
   animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(50, 216, 92, 0.8), 0 0 20px rgba(79, 199, 143, 0.5);
   }
   to {
-    text-shadow: 2px 2px 12px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
+    text-shadow: 2px 2px 12px rgb(89, 214, 146), 0 0 30px rgba(71, 192, 146, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
   }
 }
 
@@ -104,7 +104,7 @@
 }
 
 .about-text h2 {
-  color: #3b82f6;
+  color: #047857;
   margin-bottom: 15px;
   font-size: 1.9rem;
 }
@@ -118,14 +118,12 @@
 /* Approach Items Styling */
 .approach-section {
   margin-top: 40px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
 }
 
 .approach-section h2 {
   text-align: center;
-  color: #3b82f6;
+  color:#047857;
   margin-bottom: 20px;
   font-size: 2.8rem;
   position: relative;
@@ -139,8 +137,59 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #047857,#047857);
   border-radius: 2px;
+}
+
+.approach-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 40px;
+}
+
+.approach-card {
+  background: rgb(241, 246, 253);
+  padding: 32px 24px;
+  min-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.approach-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.approach-card .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 120, 87, 0.1);
+  border-radius: 50%;
+  border: 3px solid #047857;
+}
+
+.approach-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #047857;
+  margin: 12px 0 8px 0;
+}
+
+.approach-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
 }
 
 .approach-item {
@@ -148,12 +197,12 @@
   padding: 20px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  border-left: 8px solid #3b82f6;
+  border-left: 8px solid #047857;
   background-color: #ebeffd;
 }
 
 .approach-item h3 {
-  color: #3b82f6;
+  color: #047857;
   margin-bottom: 8px;
   font-size: 1.6rem;
   font-weight: 600;
@@ -164,4 +213,24 @@
   color: #374151;
   line-height: 1.6;
   font-size: 1.3rem;
+}
+
+/* Responsive Design for Approach Grid */
+@media (max-width: 1200px) {
+  .approach-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
 }
