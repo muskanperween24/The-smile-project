@@ -1,6 +1,7 @@
 .hero-section {
   position: relative;
   height: 60vh;
+  padding-top: 110px; /* Add padding for fixed navbar */
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
