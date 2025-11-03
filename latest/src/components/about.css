@@ -1,7 +1,7 @@
 .hero-section {
   position: relative;
-  height: 60vh;
-  padding-top: 110px; /* Add padding for fixed navbar */
+  height: calc(60vh + 110px); /* Increase height to accommodate navbar */
+  margin-top: 110px; /* Use margin for proper image display */
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -224,6 +224,11 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    height: calc(60vh + 80px); /* Adjust for mobile navbar */
+    margin-top: 80px; /* Smaller margin for mobile */
+  }
+  
   .approach-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;

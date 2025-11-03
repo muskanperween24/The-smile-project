@@ -12,8 +12,10 @@ body {
   background-position: center;
   color: white;
   text-align: center;
-  padding: 110px 16px 60px 16px; /* Add top padding for fixed navbar */
-  min-height: 600px;
+  padding: 60px 16px; /* Remove extra top padding */
+  margin-top: 110px; /* Use margin for proper image display */
+  min-height: calc(600px - 110px); /* Adjust min-height */
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -313,4 +315,13 @@ body {
 }
 .donate-btn:hover {
   background: #fde047;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .header {
+    margin-top: 80px; /* Smaller margin for mobile navbar */
+    min-height: calc(500px - 80px); /* Adjust height for mobile */
+    padding: 40px 16px; /* Reduce padding on mobile */
+  }
 }

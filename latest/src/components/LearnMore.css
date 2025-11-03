@@ -8,8 +8,8 @@
 /* Hero Section */
 .learn-more-hero {
   position: relative;
-  height: 70vh;
-  padding-top: 110px; /* Add padding for fixed navbar */
+  height: calc(70vh + 110px); /* Increase height for navbar space */
+  margin-top: 110px; /* Use margin for proper image display */
   background: url('/images/Learn more .webp');
   background-size: cover;
   background-position: center;
@@ -213,6 +213,11 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .learn-more-hero {
+    height: calc(60vh + 80px); /* Adjust for mobile navbar */
+    margin-top: 80px; /* Smaller margin for mobile */
+  }
+  
   .hero-vision-mission {
     grid-template-columns: 1fr;
     gap: 2rem;
