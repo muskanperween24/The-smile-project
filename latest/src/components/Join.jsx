@@ -132,24 +132,28 @@ const Join = () => {
           <div className="join-instructions">
             <h3>How to Join Us</h3>
             <div className="instruction-step">
-              <span className="step-number">1.</span>
+              <span className="step-number">1</span>
               <p>Fill out the form with your complete details</p>
             </div>
             <div className="instruction-step">
-              <span className="step-number">2.</span>
+              <span className="step-number">2</span>
               <p>Tell us why you want to join our mission</p>
             </div>
             <div className="instruction-step">
-              <span className="step-number">3.</span>
+              <span className="step-number">3</span>
               <p>Our team will review your application</p>
             </div>
             <div className="instruction-step">
-              <span className="step-number">4.</span>
+              <span className="step-number">4</span>
               <p>We'll contact you for a brief interview</p>
             </div>
             <div className="instruction-step">
-              <span className="step-number">5.</span>
+              <span className="step-number">5</span>
               <p>Join us and start making a difference!</p>
+            </div>
+            <div className="instruction-step">
+              <span className="step-number">6</span>
+              <p>Begin your journey as a volunteer with us</p>
             </div>
           </div>
 

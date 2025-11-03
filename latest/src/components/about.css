@@ -118,9 +118,7 @@
 /* Approach Items Styling */
 .approach-section {
   margin-top: 40px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
 }
 
 .approach-section h2 {
@@ -141,6 +139,57 @@
   height: 4px;
   background: linear-gradient(135deg, #047857,#047857);
   border-radius: 2px;
+}
+
+.approach-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 40px;
+}
+
+.approach-card {
+  background: rgb(241, 246, 253);
+  padding: 32px 24px;
+  min-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.approach-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.approach-card .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 120, 87, 0.1);
+  border-radius: 50%;
+  border: 3px solid #047857;
+}
+
+.approach-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #047857;
+  margin: 12px 0 8px 0;
+}
+
+.approach-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
 }
 
 .approach-item {
@@ -164,4 +213,24 @@
   color: #374151;
   line-height: 1.6;
   font-size: 1.3rem;
+}
+
+/* Responsive Design for Approach Grid */
+@media (max-width: 1200px) {
+  .approach-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
 }

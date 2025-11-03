@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(74, 144, 226, 0.05) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(5, 150, 105, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -31,11 +31,14 @@
 
 .donate-header h1 {
   font-size: 4rem;
-  color: #4a90e2;
+  background: linear-gradient(135deg, #059669, #10b981, #34d399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-family: 'Poppins', 'Montserrat', sans-serif;
-  text-shadow: 0 2px 10px rgba(74, 144, 226, 0.2);
+  text-shadow: 0 2px 10px rgba(5, 150, 105, 0.2);
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -71,17 +74,17 @@
 }
 
 .tab-btn:hover {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #059669, #10b981);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
 }
 
 .tab-btn.active {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #059669, #10b981);
   color: white;
-  border-color: #4a90e2;
-  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+  border-color: #059669;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
 }
 
 /* Main content layout */
@@ -136,7 +139,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+  border-bottom: 1px solid rgba(5, 150, 105, 0.1);
 }
 
 .detail-row:last-child {
@@ -150,7 +153,7 @@
 }
 
 .detail-row .value {
-  color: #4a90e2;
+  color: #059669;
   font-weight: 500;
   text-align: right;
   flex: 1;
@@ -247,7 +250,7 @@
 .qr-placeholder {
   width: 150px;
   height: 150px;
-  border: 2px solid #4a90e2;
+  border: 2px solid #059669;
   border-radius: 10px;
   margin: 0 auto 1rem;
   background: white;
@@ -281,7 +284,7 @@
 }
 
 .app-logo {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #059669, #10b981);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -328,9 +331,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #059669, #10b981);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
 }
 
 .impact-text h4 {
@@ -425,17 +428,17 @@
 }
 
 .amount-btn:hover {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #059669, #10b981);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
 }
 
 .amount-btn.selected {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #059669, #10b981);
   color: white;
-  border-color: #4a90e2;
-  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+  border-color: #059669;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
 }
 
 .custom-amount input {
@@ -450,8 +453,8 @@
 
 .custom-amount input:focus {
   outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  border-color: #059669;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
 }
 
 /* Donor Information */
@@ -488,9 +491,9 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #059669;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
   transform: translateY(-2px);
 }
 
@@ -502,7 +505,7 @@
 /* Submit Button */
 .donate-submit-btn {
   width: 100%;
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;

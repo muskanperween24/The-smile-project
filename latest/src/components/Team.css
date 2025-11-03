@@ -19,7 +19,10 @@
 
 .section-header h2 {
   font-size: 3rem;
-  color: #1e40af;
+  background: linear-gradient(135deg, #059669, #10b981, #34d399);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   font-weight: bold;
   margin: 0 0 1rem 0;
   position: relative;
@@ -36,8 +39,13 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(90deg, #059669, #10b981) !important;
   border-radius: 2px;
+}
+
+/* Ensure all section underlines are green */
+.team-section .section-header h2::after {
+  background: linear-gradient(90deg, #059669, #10b981) !important;
 }
 
 /* Header Section */
@@ -65,10 +73,10 @@
 }
 
 .team-title-section .highlight {
-  color: #3b82f6;
+  color: #059669;
   font-weight: 700;
   font-size: 3.2rem;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #059669, #10b981);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,23 +105,14 @@
 
 .section-header h2 {
   font-size: 2.2rem;
-  color: #2563eb;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   margin: 0;
   position: relative;
   display: inline-block;
-}
-
-.section-header h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
-  border-radius: 2px;
 }
 
 .team-members-grid {
@@ -191,7 +190,10 @@
 .member-name {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #2563eb;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0 0 8px 0;
 }
 
@@ -231,7 +233,7 @@
 }
 
 .read-more-btn:hover {
-  color: #2563eb;
+  color: #059669;
 }
 
 /* Responsive Design */
@@ -250,7 +252,10 @@
   
   .section-header h2 {
     font-size: 2.5rem;
-    color: #2563eb;
+    background: linear-gradient(135deg, #059669, #10b981);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -448,7 +453,10 @@
 
 .modal-info h2 {
   font-size: 2rem;
-  color: #2563eb;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0 0 10px 0;
   font-weight: 600;
 }
