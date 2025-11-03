@@ -42,8 +42,8 @@
 }
 
 .donate-btn {
-  /* changed to theme blue */
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  /* changed to green theme to match logo */
+  background: linear-gradient(135deg, #059669, #047857);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -52,7 +52,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2);
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -64,7 +64,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1e40af, #2563eb);
+  background: linear-gradient(135deg, #047857, #059669);
   transition: all 0.4s ease;
   z-index: -1;
 }
@@ -75,7 +75,7 @@
 
 .donate-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
 }
 .logo-link::before {
   content: '';
@@ -166,7 +166,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, #059669, #10b981);
   transition: all 0.4s ease;
   z-index: -1;
 }
@@ -178,14 +178,14 @@
 .nav-link:hover {
   color: white !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
 }
 
 /* Active link (persisting when the route is active) */
 .nav-link.active {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #059669, #047857);
   color: #ffffff !important;
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.2);
 }
 
 /* Join Us Button */
@@ -233,21 +233,21 @@
 }
 
 .mobile-menu-btn button {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #059669, #047857);
   border: none;
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
   padding: 0.75rem;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2);
   transition: all 0.3s ease;
 }
 
 .mobile-menu-btn button:hover {
-  background: linear-gradient(135deg, #1e40af, #2563eb);
+  background: linear-gradient(135deg, #047857, #059669);
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
 }
 
 .mobile-menu {
@@ -277,10 +277,10 @@
 
 .mobile-menu a:hover,
 .mobile-menu a:focus {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #059669, #047857);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
 }
 
 /* Mobile Buttons */
