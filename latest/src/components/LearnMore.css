@@ -9,6 +9,7 @@
 .learn-more-hero {
   position: relative;
   height: 70vh;
+  padding-top: 110px; /* Add padding for fixed navbar */
   background: url('/images/Learn more .webp');
   background-size: cover;
   background-position: center;
@@ -49,7 +50,10 @@
 .hero-mission h2 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #3b82f6;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
   text-shadow: none;
 }
@@ -91,10 +95,13 @@
 .section-header h2 {
   font-size: 3rem;
   font-weight: 700;
-  color: #3b82f6;
+  background: linear-gradient(135deg, #059669, #10b981, #34d399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(59, 130, 246, 0.2);
+  text-shadow: 2px 2px 4px rgba(5, 150, 105, 0.2);
 }
 
 .section-header h2::after {
@@ -105,7 +112,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #059669, #10b981);
   border-radius: 2px;
 }
 
@@ -124,10 +131,10 @@
 }
 
 .additional-info {
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(5, 150, 105, 0.1);
   padding: 2rem;
   border-radius: 15px;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid #059669;
   font-weight: 500;
   margin-top: 3rem !important;
 }
@@ -147,26 +154,26 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.1);
 }
 
 .program-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(5, 150, 105, 0.2);
 }
 
 .program-icon {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #059669, #10b981);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
   padding: 20px;
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
 }
 
 .program-icon img {

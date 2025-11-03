@@ -1,7 +1,0 @@
-/* Favicon circular styling - This won't work for actual favicon but can be used for logo display */
-.circular-logo {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-}
