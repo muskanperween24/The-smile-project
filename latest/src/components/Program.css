@@ -22,15 +22,13 @@ body {
 }
 
 @keyframes slideshow {
-  0%, 20% {
+  0%, 33% {
     background-image: url('/stu.png');
   }
-  20%, 40% {
+  34%, 66% {
     background-image: url('/img13.jpg');
   }
-  
-    
-  80%, 100% {
+  67%, 100% {
     background-image: url('/ed1.png');
   }
 }
