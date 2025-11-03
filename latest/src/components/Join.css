@@ -32,11 +32,14 @@
 
 .join-header h1 {
   font-size: 4rem;
-  color: #4a90e2;
+  background: linear-gradient(135deg, #059669, #10b981, #34d399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-family: 'Poppins', 'Montserrat', sans-serif;
-  text-shadow: 0 2px 10px rgba(74, 144, 226, 0.2);
+  text-shadow: 0 2px 10px rgba(5, 150, 105, 0.2);
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -120,9 +123,16 @@
 .step-number {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #4a90e2;
+  color: white;
+  background: linear-gradient(135deg, #059669, #10b981);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
-  min-width: 25px;
+  min-width: 30px;
 }
 
 .instruction-step p {
@@ -162,9 +172,9 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #059669;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
   transform: translateY(-2px);
 }
 
@@ -175,7 +185,7 @@
 }
 
 .join-submit-btn {
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -194,9 +204,9 @@
 }
 
 .join-submit-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #357abd 0%, #2c5aa0 100%);
+  background: linear-gradient(135deg, #047857 0%, #059669 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
 }
 
 .join-submit-btn:disabled {
@@ -246,7 +256,10 @@
 
 .join-info-box h3 {
   font-size: 1.5rem;
-  color: #4a90e2;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
   font-weight: 700;
   text-align: center;
@@ -262,18 +275,18 @@
   gap: 0.6rem;
   margin-bottom: 0.8rem;
   padding: 0.6rem;
-  background: rgba(74, 144, 226, 0.05);
+  background: rgba(5, 150, 105, 0.05);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .step:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.1);
+  box-shadow: 0 5px 15px rgba(5, 150, 105, 0.1);
 }
 
 .step-number {
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
   color: white;
   width: 24px;
   height: 24px;
@@ -308,7 +321,10 @@
 }
 
 .volunteer-types h4 {
-  color: #4a90e2;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.6rem;
   font-size: 1rem;
   font-weight: 600;
@@ -323,7 +339,7 @@
 .volunteer-types li {
   padding: 0.2rem 0;
   color: #5a6c7d;
-  border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+  border-bottom: 1px solid rgba(5, 150, 105, 0.1);
   font-size: 0.8rem;
   line-height: 1.3;
 }
@@ -339,12 +355,15 @@
 .contact-info {
   text-align: center;
   padding: 0.8rem;
-  background: rgba(74, 144, 226, 0.05);
+  background: rgba(5, 150, 105, 0.05);
   border-radius: 10px;
 }
 
 .contact-info h4 {
-  color: #4a90e2;
+  background: linear-gradient(135deg, #059669, #10b981);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -357,7 +376,7 @@
 }
 
 .contact-info a {
-  color: #4a90e2;
+  color: #059669;
   text-decoration: none;
   font-weight: 500;
 }
