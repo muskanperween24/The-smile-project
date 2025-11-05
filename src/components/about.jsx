@@ -6,7 +6,7 @@ const About = () => {
     <div>
       {/* 🔹 Hero Banner with Background Image */}
       <section className="hero-section" style={{
-        backgroundImage: 'url("/img12.png")',
+        backgroundImage: 'url("./img12.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: '400px',
