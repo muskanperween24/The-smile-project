@@ -25,13 +25,13 @@ body {
 
 @keyframes slideshow {
   0%, 33% {
-    background-image: url('/stu.png');
+    background-image: url('images/stu.png');
   }
   34%, 66% {
-    background-image: url('/img13.jpg');
+    background-image: url('/images/img13.jpg');
   }
   67%, 100% {
-    background-image: url('/ed1.png');
+    background-image: url('/images/ed1.png');
   }
 }
 .header h1 {
