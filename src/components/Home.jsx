@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import './Home.css'
 
 // Import images
-import bg1 from '/images/background picture 1.jpeg'
+import bg1 from '/images/home picture 1.jpeg'
 import bg2 from '/images/background 1 home.jpg'
-import bg3 from '/images/background picture 2.avif'
+import bg3 from '/images/background picture 1.jpeg'
 import bg4 from '/images/background picture 3.jpg'
 
 const Home = () => {
@@ -210,7 +210,7 @@ const Home = () => {
           {/* Story 1 - Banita */}
           <div className="success-story-card">
             <div className="story-image">
-              <img src="/images/SUCCESS STOYRY.jpeg" alt="Banita's Success Story" />
+              <img src="/images/success picture 1.avif" alt="Banita's Success Story" />
             </div>
             <div className="story-content">
               <h3>Community Impact</h3>
@@ -252,7 +252,7 @@ const Home = () => {
           {/* Story 2 - Sulema & Sagori */}
           <div className="success-story-card reverse">
             <div className="story-image">
-              <img src="/images/2ND SUCCESS STOYR 2.jpeg" alt="Sulema & Sagori's Success Story" />
+              <img src="/images/success picture 2.webp" alt="Sulema & Sagori's Success Story" />
             </div>
             <div className="story-content">
               <h3>Skills Development Success</h3>
