@@ -1,0 +1,242 @@
+.hero-section {
+  position: relative;
+  height: calc(60vh + 110px); /* Increase height to accommodate navbar */
+  margin-top: 110px; /* Use margin for proper image display */
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  border-bottom: px solid #22aa76;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #047857;
+  text-shadow: 2px 2px 8px rgba(19, 194, 106, 0.8), 0 0 20px rgba(68, 180, 128, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 2px 2px 8px rgba(50, 216, 92, 0.8), 0 0 20px rgba(79, 199, 143, 0.5);
+  }
+  to {
+    text-shadow: 2px 2px 12px rgb(89, 214, 146), 0 0 30px rgba(71, 192, 146, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
+  }
+}
+
+.hero-text p {
+  max-width: 700px;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* About Section */
+.about-section {
+  background: #dedcf1;
+  padding: 50px 10px;
+  max-width: 1300px;
+  margin: -120px auto 60px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 9;
+}
+
+.about-container {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 420px;
+  height: 320px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #047857;
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.about-text p {
+  font-size: 1.3em;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Approach Items Styling */
+.approach-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.approach-section h2 {
+  text-align: center;
+  color:#047857;
+  margin-bottom: 20px;
+  font-size: 2.8rem;
+  position: relative;
+}
+
+.approach-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #047857,#047857);
+  border-radius: 2px;
+}
+
+.approach-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 40px;
+}
+
+.approach-card {
+  background: rgb(241, 246, 253);
+  padding: 32px 24px;
+  min-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.approach-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.approach-card .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 120, 87, 0.1);
+  border-radius: 50%;
+  border: 3px solid #047857;
+}
+
+.approach-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #047857;
+  margin: 12px 0 8px 0;
+}
+
+.approach-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+.approach-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  border-left: 8px solid #047857;
+  background-color: #ebeffd;
+}
+
+.approach-item h3 {
+  color: #047857;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.approach-item p {
+  margin-bottom: 0;
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+/* Responsive Design for Approach Grid */
+@media (max-width: 1200px) {
+  .approach-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: calc(60vh + 80px); /* Adjust for mobile navbar */
+    margin-top: 80px; /* Smaller margin for mobile */
+  }
+  
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
