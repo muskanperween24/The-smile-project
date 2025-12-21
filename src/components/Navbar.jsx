@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useDarkMode } from '../contexts/DarkModeContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <nav className="navbar">
@@ -32,6 +34,9 @@ const Navbar = () => {
             <NavLink to="/contact" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Contact Us</NavLink>
             <Link to="/join" className="join-us-btn">Join Us</Link>
             <Link to="/donate" className="donate-btn">Donate Now</Link>
+            <button className="dark-mode-toggle" onClick={toggleDarkMode} title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+              {isDarkMode ? '☀️' : '🌙'}
+            </button>
           </div>
 
           <div className="mobile-menu-btn">
@@ -50,6 +55,9 @@ const Navbar = () => {
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             <Link to="/join" className="join-us-btn mobile" onClick={() => setIsMenuOpen(false)}>Join Us</Link>
             <Link to="/donate" className="donate-btn mobile" onClick={() => setIsMenuOpen(false)}>Donate Now</Link>
+            <button className="dark-mode-toggle mobile" onClick={toggleDarkMode} title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+              {isDarkMode ? '☀️' : '🌙'} {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
           </div>
         )}
       </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
@@ -13,6 +13,16 @@ const Home = () => {
   const [showFullStory1, setShowFullStory1] = useState(false);
   const [showFullStory2, setShowFullStory2] = useState(false);
   const [currentProgram, setCurrentProgram] = useState(0);
+  
+  // Counter animation states
+  const [counters, setCounters] = useState({
+    students: 0,
+    villages: 0,
+    volunteers: 0,
+    lives: 0
+  });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef(null);
 
   // Slider images data
   const sliderImages = [
@@ -96,6 +106,61 @@ const Home = () => {
     return () => clearInterval(slideInterval);
   }, []);
 
+  // Counter animation effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            
+            // Animation targets
+            const targets = {
+              students: 500,
+              villages: 20,
+              volunteers: 50,
+              lives: 10000
+            };
+
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const stepDuration = duration / steps;
+
+            let currentStep = 0;
+            
+            const timer = setInterval(() => {
+              currentStep++;
+              const progress = currentStep / steps;
+
+              setCounters({
+                students: Math.floor(targets.students * progress),
+                villages: Math.floor(targets.villages * progress),
+                volunteers: Math.floor(targets.volunteers * progress),
+                lives: Math.floor(targets.lives * progress)
+              });
+
+              if (currentStep >= steps) {
+                clearInterval(timer);
+                setCounters(targets); // Set final values
+              }
+            }, stepDuration);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
   };
@@ -146,9 +211,15 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-smile-container">
             <div className="custom-smile-text">
-              <span className="smile-emoji">😊</span>
-              <span className="smile-text">Smile</span>
-              <span className="smile-emoji">😊</span>
+              <span className="smile-emoji drop-animation" style={{animationDelay: '0s'}}>😊</span>
+              <span className="smile-text">
+                <span className="drop-animation" style={{animationDelay: '0.1s'}}>S</span>
+                <span className="drop-animation" style={{animationDelay: '0.2s'}}>m</span>
+                <span className="drop-animation" style={{animationDelay: '0.3s'}}>i</span>
+                <span className="drop-animation" style={{animationDelay: '0.4s'}}>l</span>
+                <span className="drop-animation" style={{animationDelay: '0.5s'}}>e</span>
+              </span>
+              <span className="smile-emoji drop-animation" style={{animationDelay: '0.6s'}}>😊</span>
             </div>
           </div>
           <p className="tagline">Spreading joy and making a difference, one smile at a time</p>
@@ -169,33 +240,28 @@ const Home = () => {
             Our Trust was founded by Md. Mehruddin with a mission to create positive social change and
             improve the lives of underprivileged children and families. We believe that every child deserves
             access to quality education, healthcare, and opportunities for growth.
-            {/* <br /><br />
-            Through our dedicated programs, we work tirelessly to bridge the gap between privilege and need. 
-            Our initiatives span across education support, skill development, healthcare awareness, and 
-            community empowerment. We collaborate with local communities, volunteers, and partners to 
-            create sustainable solutions that address the root causes of poverty and inequality. */}
           </div>
         </div>
       </div>
 
       {/* Impact Stats */}
-      <div className="stats-section">
+      <div className="stats-section" ref={statsRef}>
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
-              <div className="stat-number">500+</div>
+              <div className="stat-number">{counters.students.toLocaleString()}+</div>
               <div className="stat-label">Students Educated</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">20</div>
+              <div className="stat-number">{counters.villages.toLocaleString()}</div>
               <div className="stat-label">Villages Reached</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">50</div>
+              <div className="stat-number">{counters.volunteers.toLocaleString()}</div>
               <div className="stat-label">Volunteers Active</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">10,000+</div>
+              <div className="stat-number">{counters.lives.toLocaleString()}+</div>
               <div className="stat-label">Lives Touched</div>
             </div>
           </div>

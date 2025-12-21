@@ -541,3 +541,62 @@
     height: 250px;
   }
 }
+
+/* Dark Mode Styles for Contact Component */
+body.dark-mode .contact-page {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #1e293b 100%) !important;
+}
+
+body.dark-mode .contact-container h1,
+body.dark-mode .section-title {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .contact-content {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  box-shadow: var(--shadow-medium) !important;
+}
+
+body.dark-mode .contact-form {
+  background-color: var(--bg-white) !important;
+}
+
+body.dark-mode .form-group label {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .form-control {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .form-control:focus {
+  border-color: var(--primary-blue) !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .contact-info {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .info-item h3,
+body.dark-mode .info-item p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .map-section {
+  background-color: var(--bg-white) !important;
+}
+
+body.dark-mode .map-overlay h2,
+body.dark-mode .map-overlay p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .map-info {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+}

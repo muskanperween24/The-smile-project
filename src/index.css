@@ -1,5 +1,6 @@
 /* Global Theme Variables */
 :root {
+  /* Light Mode Colors */
   --primary-blue: #1e40af;
   --secondary-purple: #8b5cf6;
   --accent-orange: #f97316;
@@ -12,12 +13,27 @@
   --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.15);
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #1e40af, #8b5cf6);
+  
+  /* Transition for smooth theme change */
+  --transition: all 0.3s ease;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+  --bg-light: #0f172a;
+  --bg-white: #1e293b;
+  --text-dark: #f1f5f9;
+  --text-gray: #cbd5e1;
+  --shadow-light: 0 8px 25px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.5);
+  --gradient-primary: linear-gradient(135deg, #4338ca 0%, #7c3aed 100%);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: var(--transition);
 }
 
 body {
@@ -28,6 +44,7 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: var(--transition);
 }
 
 /* Global responsive container */

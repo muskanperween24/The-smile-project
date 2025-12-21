@@ -76,7 +76,7 @@ const Program = () => {
                 desc: "Logon ko sahi aur imandaar politics ke baare me jagruk banana.",
               },
               {
-                icon: "🏫",
+                icon: "�",
                 title: "Educational Institutions",
                 desc: "School, College, aur University jaise educational centers chalana.",
               },

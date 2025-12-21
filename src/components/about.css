@@ -240,3 +240,34 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark Mode Styles for About Component */
+body.dark-mode .hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+}
+
+body.dark-mode .section {
+  background-color: var(--bg-light) !important;
+}
+
+body.dark-mode .section h1,
+body.dark-mode .section h2,
+body.dark-mode .section h3,
+body.dark-mode .section p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .approach-card {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  box-shadow: var(--shadow-light) !important;
+}
+
+body.dark-mode .approach-card h3,
+body.dark-mode .approach-card p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .content-container {
+  background-color: var(--bg-light) !important;
+}

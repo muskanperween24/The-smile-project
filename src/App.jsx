@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { DarkModeProvider } from './contexts/DarkModeContext'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/about'
@@ -14,22 +15,24 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Program />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/join" element={<Join />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/learn-more" element={<LearnMore />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <DarkModeProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/programs" element={<Program />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/learn-more" element={<LearnMore />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </DarkModeProvider>
   )
 }
 

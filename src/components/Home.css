@@ -160,6 +160,36 @@ p {
   letter-spacing: 0.1em;
   animation: textGlow 2s ease-in-out infinite alternate;
   transition: all 0.3s ease;
+  display: inline-flex;
+  gap: 0;
+}
+
+.smile-text span {
+  display: inline-block;
+}
+
+.drop-animation {
+  display: inline-block;
+  animation: dropDown 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .smile-emoji {
@@ -489,7 +519,7 @@ p {
 
 .stats-section {
   padding: 1rem 0;
-  background: linear-gradient(135deg, #059669, #10b981);
+  background: linear-gradient(135deg, #059669, #10b981) !important;
   color: white;
 }
 
@@ -1387,4 +1417,90 @@ p {
   .news-image {
     height: 180px;
   }
+}
+
+/* Dark Mode Styles for Home Component */
+body.dark-mode .hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+}
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-content h2,
+body.dark-mode .hero-content p {
+  color: var(--text-dark) !important;
+}
+
+/* Main sections dark mode */
+body.dark-mode .about-section,
+body.dark-mode .programs-section,
+body.dark-mode .news-section {
+  background-color: var(--bg-light) !important;
+}
+
+body.dark-mode .stats-section {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+}
+
+body.dark-mode .section h2,
+body.dark-mode .section h3,
+body.dark-mode .section p,
+body.dark-mode .about-section h2,
+body.dark-mode .about-section p,
+body.dark-mode .programs-section h2,
+body.dark-mode .programs-section p,
+body.dark-mode .stats-section h2,
+body.dark-mode .stats-section p,
+body.dark-mode .news-section h2,
+body.dark-mode .news-section p {
+  color: var(--text-dark) !important;
+}
+
+/* Cards and containers */
+body.dark-mode .card,
+body.dark-mode .story-card,
+body.dark-mode .news-card,
+body.dark-mode .program-card,
+body.dark-mode .program-item {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  box-shadow: var(--shadow-light) !important;
+}
+
+/* Stats items */
+body.dark-mode .stats-item,
+body.dark-mode .stats-item h3,
+body.dark-mode .stats-item p {
+  color: var(--text-dark) !important;
+  background-color: var(--bg-white) !important;
+}
+
+/* About content */
+body.dark-mode .about-content,
+body.dark-mode .about-content h2,
+body.dark-mode .about-content p {
+  color: var(--text-dark) !important;
+  background-color: var(--bg-light) !important;
+}
+
+/* Hero overlay content */
+body.dark-mode .hero-overlay {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* News and story content */
+body.dark-mode .story-content h3,
+body.dark-mode .story-content p,
+body.dark-mode .news-content h3,
+body.dark-mode .news-content p {
+  color: var(--text-dark) !important;
+}
+
+/* Program grid items */
+body.dark-mode .programs-grid .program-item {
+  background-color: var(--bg-white) !important;
+}
+
+body.dark-mode .programs-grid .program-item h3,
+body.dark-mode .programs-grid .program-item p {
+  color: var(--text-dark) !important;
 }

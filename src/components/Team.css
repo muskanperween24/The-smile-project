@@ -526,3 +526,50 @@
     padding: 0 20px 20px 20px;
   }
 }
+
+/* Dark Mode Styles for Team Component */
+body.dark-mode .team-page {
+  background-color: var(--bg-light) !important;
+}
+
+body.dark-mode .team-section {
+  background-color: var(--bg-light) !important;
+}
+
+body.dark-mode .section-header h2 {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .member-card {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+  box-shadow: var(--shadow-light) !important;
+}
+
+body.dark-mode .member-name,
+body.dark-mode .member-role,
+body.dark-mode .member-description p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark-mode .modal-content {
+  background-color: var(--bg-white) !important;
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .modal-info h2,
+body.dark-mode .modal-info p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .close-btn {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .close-btn:hover {
+  color: var(--accent-orange) !important;
+}
