@@ -12,9 +12,24 @@
   margin: 0 auto;
 }
 
+.team-section .team-members-grid.one-item {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.team-section .team-members-grid.one-item .team-member-card {
+  margin: 0 auto;
+}
+
+
 .section-header {
   text-align: center;
   margin-bottom: 50px;
+
+  .one-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .section-header h2 {
@@ -572,4 +587,17 @@ body.dark-mode .close-btn {
 
 body.dark-mode .close-btn:hover {
   color: var(--accent-orange) !important;
+}
+
+/* Mentor Section ko center karne ka sahi tarika */
+.team-members-grid.one-item {
+  display: flex !important;      /* Grid ki jagah flex use karenge */
+  justify-content: center;       /* Card ko horizontally center karega */
+  align-items: center;
+  width: 100%;
+}
+
+.team-members-grid.one-item .team-member-card {
+  max-width: 350px;              /* Mentor card ko bahut choda hone se rokega */
+  margin: 0 auto;                /* Extra safety for centering */
 }

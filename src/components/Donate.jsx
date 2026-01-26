@@ -349,12 +349,6 @@ const Donate = () => {
           >
             💳 Online Transfer Now!
           </button>
-          <button 
-            className={`tab-btn ${activeTab === 'scan' ? 'active' : ''}`}
-            onClick={() => setActiveTab('scan')}
-          >
-            📱 Make a Donation Now!
-          </button>
         </div>
 
         <div className="donate-content">
@@ -367,7 +361,7 @@ const Donate = () => {
                 <div className="bank-details">
                   <div className="detail-row">
                     <span className="label">Name:</span>
-                    <span className="value">THE PROJECT SMILE FOUNDATION</span>
+                    <span className="value">THE PROJECT SMILE</span>
                   </div>
                   <div className="detail-row">
                     <span className="label">Bank:</span>
@@ -375,15 +369,15 @@ const Donate = () => {
                   </div>
                   <div className="detail-row">
                     <span className="label">Account Number:</span>
-                    <span className="value">41234567890</span>
+                    <span className="value">44836421716</span>
                   </div>
                   <div className="detail-row">
                     <span className="label">Branch:</span>
-                    <span className="value">Main Branch, New Delhi - 110 001</span>
+                    <span className="value">Arrabari Kishanganj - 855117</span>
                   </div>
                   <div className="detail-row">
                     <span className="label">IFSC Code:</span>
-                    <span className="value">SBIN0001234</span>
+                    <span className="value">SBIN0061241</span>
                   </div>
                   <div className="detail-row">
                     <span className="label">Account Type:</span>
@@ -392,98 +386,18 @@ const Donate = () => {
                 </div>
               </div>
 
-              <div className="donation-form">
-                <h3>Donation Details</h3>
-                
-                <div className="amount-section">
-                  <label>Select Donation Amount</label>
-                  <div className="predefined-amounts">
-                    {predefinedAmounts.map(amount => (
-                      <button
-                        key={amount}
-                        className={`amount-btn ${donationAmount == amount ? 'selected' : ''}`}
-                        onClick={() => setDonationAmount(amount)}
-                      >
-                        ₹{amount.toLocaleString()}
-                      </button>
-                    ))}
+              {/* QR Code Section moved here */}
+              <div className="qr-section" style={{marginBottom: '2rem'}}>
+                <h3>SIMPLY <span className="scan-text">SCAN AND DONATE</span></h3>
+                <p>Digital Payment Method by QR code</p>
+                <div className="qr-code-container">
+                  <img src="public/images/qrcode (1).jpeg" alt="Donation QR Code" style={{width: '220px', height: '220px', objectFit: 'contain', margin: '0 auto', display: 'block'}} />
+                  <p style={{textAlign: 'center'}}>SCAN & PAY WITH ANY UPI APP</p>
+                  <div className="payment-apps" style={{textAlign: 'center'}}>
+                    <span className="app-logo">GPay</span>
+                    <span className="app-logo">PhonePe</span>
+                    <span className="app-logo">Paytm</span>
                   </div>
-                  <div className="custom-amount">
-                    <input
-                      type="number"
-                      placeholder="Enter custom amount"
-                      value={donationAmount}
-                      onChange={(e) => setDonationAmount(e.target.value)}
-                      min="1"
-                    />
-                  </div>
-                </div>
-
-                <div className="donor-info">
-                  <div className="form-group">
-                    <label htmlFor="name">Full Name *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Your Full Name"
-                      value={donorInfo.name}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="email">Email Address *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="your.email@example.com"
-                      value={donorInfo.email}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="phone">Phone Number *</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Your Phone Number"
-                      value={donorInfo.phone}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <button 
-                  className="donate-submit-btn"
-                  onClick={handlePayment}
-                  disabled={isProcessing}
-                >
-                  {isProcessing ? (
-                    <>
-                      <span className="spinner">⏳</span> Processing Donation...
-                    </>
-                  ) : (
-                    <>
-                      <span>💝</span> Donate ₹{donationAmount || 0} Now (Demo)
-                    </>
-                  )}
-                </button>
-
-                <div className="demo-notice">
-                  <p>🧪 <strong>Demo Mode:</strong> This is a demonstration. No real payment will be charged.</p>
-                  <p>✉️ You will still receive a receipt email to test the system.</p>
-                </div>
-
-                <div className="payment-security">
-                  <p>🔒 Secure payment system ready</p>
-                  <p>💳 Supports UPI, Cards, Net Banking & Wallets</p>
                 </div>
               </div>
             </div>
@@ -498,9 +412,6 @@ const Donate = () => {
                   Any donations made to The Project Smile Foundation are exempt u/s 80G subject to limits prescribed under the Income Tax Act 1961.
                   (Approval No. CITE/80G/1004/2015-16 with effect from 17.07.2015)
                 </p>
-                <button className="donate-once-btn" onClick={handlePayment}>
-                  🎁 Donate Once
-                </button>
               </div>
 
               <div className="qr-section">
