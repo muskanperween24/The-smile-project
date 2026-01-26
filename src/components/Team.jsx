@@ -71,6 +71,17 @@ const Team = () => {
     }
   ];
 
+ const mentors = [
+  {
+    id: 1,
+    name: "Abodh Ji",
+    role: "Mentor/Guide",
+    image: "/images/Abodh ji.jpeg",
+    description: `Abodh Ji is a humble, kind, and lifelong learner dedicated to bringing positive change to the community. With a deep love for theater, he aims to provide employment and career opportunities to around 1 lakh youth, driven by his ultimate dream of seeing others achieve their dreams through his work, showcasing his selfless dedication and vision for a brighter future.\n\nHe has a Postgraduate Diploma in Leadership Development from Azim Premji University, Bengaluru and his drive toward personal development and community impact has led him to lead all our community activities and bring key on-ground insights to our strategic decisions.\n\nWith 20 years in the development sector and as Co-Founder of NGO Project Potential, Abodh's leadership drives impactful community activities and provides valuable field insights. He helps our organization grow by expanding networks, diversifying funding, and strengthening our mission. Abodh is a true inspiration, guiding our path to growth and amplifying our community impact.`
+  }
+];
+
+
   return (
     <div className="team-page">
       {/* Header Section */}
@@ -131,6 +142,30 @@ const Team = () => {
         </div>
       </div>
 
+      {/* Mentor Section */}
+<div className="team-section">
+  <div className="section-header">
+    <h2>Mentor</h2>
+  </div>
+  {/* Yahan 'one-item' class card ko center karne ke liye hai */}
+  <div className="team-members-grid one-item">
+    {mentors.map((member) => (
+      <div key={member.id} className="team-member-card">
+        <div className="member-image">
+          <img src={member.image} alt={member.name} />
+        </div>
+        <div className="member-info">
+          <h3 className="member-name">{member.name}</h3>
+          <p className="member-role">{member.role}</p>
+          <p className="member-description">{member.description}</p>
+          <button className="read-more-btn" onClick={() => openModal(member)}>Read more</button>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+      
+
       {/* Modal */}
       {isModalOpen && selectedMember && (
         <div className="modal-overlay" onClick={closeModal}>
@@ -148,7 +183,7 @@ const Team = () => {
             <div className="modal-body">
               <p>{selectedMember.description}</p>
             </div>
-          </div>
+          </div>  
         </div>
       )}
     </div>
